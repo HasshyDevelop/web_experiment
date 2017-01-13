@@ -8,6 +8,10 @@
 
 //    require_once 'init.php';
     fcWriteHmtlHeader();
+
+    fcGetThreadList();
+
+    fcWriteThread();
 /*
     $objSmarty->assign('tpl_name_head','head.tpl');
     $objSmarty->assign('tpl_name_main','home/main.tpl');
@@ -23,14 +27,6 @@
                                ,',showAnim:         "fadeIn"'
                                 );
 
-    $objSmarty->assign('html_css_list'    ,$arrCss);
-    $objSmarty->assign('html_js_list'     ,$arrJs);
-    $objSmarty->assign('html_head_h1',    '■本、DVD、Blue-ray、GAMEの発売スケジュールをいち早くお知らせ！！ ');
-
-
-    $objSmarty->assign('calender_list'     ,$arrCalenderWeekHead);
-
-    $objSmarty->display('body.tpl');
 */
 ?>
 

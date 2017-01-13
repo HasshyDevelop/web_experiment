@@ -1,5 +1,7 @@
 <?php
-
+    //-----------------------------------------
+    //  HTML ヘッダの出力
+    //-----------------------------------------
     function fcWriteHmtlHeader(){
         global $G_HTML_STYLE_ARR, $G_HTML_JS_ARR;
         

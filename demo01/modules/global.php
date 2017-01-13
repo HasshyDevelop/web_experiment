@@ -3,7 +3,7 @@
     $G_PDO              = NULL;
 
 
-    //ƒOƒ[ƒoƒ‹•Ï”éŒ¾
+    //ã‚°ãƒ­ãƒ¼ãƒãƒ«å¤‰æ•°å®£è¨€
     $G_HTML_TITLE       = NULL;
     $G_HTML_STYLE_ARR   = array("modules/css/base.css");
     $G_HTML_JS_ARR      = array();
@@ -11,16 +11,17 @@
 
 
 
-    //ƒOƒ[ƒoƒ‹•Ï”éŒ¾
-    $G_DB_CON          = NULL;         //ƒRƒlƒNƒVƒ‡ƒ“
-    $G_LOG_NO          = 0;            //ƒƒO”Ô†
-    $G_TODAY           = NULL;         //ƒVƒXƒeƒ€“ú•t
-    $G_1WEEK_BF        = NULL;          //‚PTŠÔ‘O
+    //ã‚°ãƒ­ãƒ¼ãƒãƒ«å¤‰æ•°å®£è¨€
+    //$G_DB_CON          = NULL;         //ã‚³ãƒã‚¯ã‚·ãƒ§ãƒ³
+    $G_MY_SQLI         = NULL;
+    $G_LOG_NO          = 0;            //ãƒ­ã‚°ç•ªå·
+    $G_TODAY           = NULL;         //ã‚·ã‚¹ãƒ†ãƒ æ—¥ä»˜
+    $G_1WEEK_BF        = NULL;          //ï¼‘é€±é–“å‰
 
-    $G_1WEEK_AF        = NULL;          //‚PTŠÔŒã
-    $G_1MOTNH_AF       = NULL;          //‚Pƒ–ŒŽŒã
+    $G_1WEEK_AF        = NULL;          //ï¼‘é€±é–“å¾Œ
+    $G_1MOTNH_AF       = NULL;          //ï¼‘ãƒ¶æœˆå¾Œ
 
-    //ƒJƒŒƒ“ƒ_[—p
+    //ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼ç”¨
     $G_CALEN_Y         = NULL;
     $G_CALEN_M         = NULL;
     $G_CALEN_D         = NULL;
