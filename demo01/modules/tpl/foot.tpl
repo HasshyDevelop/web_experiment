@@ -1,0 +1,1 @@
+   <div id="pageTop">      <a href="#top">ページのトップへ戻る</a>   </div>   <div id="footer">      <div class="copyright">Copyright &copy; 2011 YOUR SITE NAME All Rights Reserved.</div>   </div><!-- footer end --></div><!-- top end --></body></html>

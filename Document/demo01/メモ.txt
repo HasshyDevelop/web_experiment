@@ -1,0 +1,2 @@
+SELECT * FROM wk_thread WHERE post_txt LIKE '%&gt;&gt;%'
+

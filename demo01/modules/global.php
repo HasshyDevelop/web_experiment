@@ -2,13 +2,13 @@
     //DB
     $G_PDO              = NULL;
 
-
     //グローバル変数宣言
     $G_HTML_TITLE       = NULL;
     $G_HTML_STYLE_ARR   = array("modules/css/base.css");
     $G_HTML_JS_ARR      = array();
 
-
+    //
+    $G_LOGIN_MODE        = NULL;
 
 
     //グローバル変数宣言

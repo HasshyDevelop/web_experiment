@@ -1,0 +1,2205 @@
+@charset "UTF-8";
+
+html>body,html>body td,html>body th{
+    font-family:"MS PGothic",Osaka,sans-serif
+}
+p,form,fieldset,h1,h2,h3,h4,h5,h6{
+    margin:0;
+    padding:0
+}
+fieldset{
+    padding:10px 0
+}
+img,fieldset{
+    border:0
+}
+legend{
+    display:none
+}
+acronym,abbr{
+    border:0;
+    text-decoration:none
+}
+label{
+    font-weight:normal;
+    cursor:pointer
+}
+a{
+    color:#053799;
+    text-decoration:none
+}
+a:hover{
+    text-decoration:underline
+}
+.yjXXL{
+    font-size:x-large;
+    voice-family:"\"}\"";
+    voice-family:inherit;
+    font-size:xx-large;
+    font-size /*!*/:x-large
+}
+html>body .yjXXL{
+    font-size:180%;
+    font-size/*!*/:xx-large
+}
+.yjXL{
+    font-size:large;
+    voice-family:"\"
+    }
+    \"";
+    voice-family:inherit;
+    font-size:x-large;
+    font-size /*!*/:large
+}
+html>body .yjXL{
+    font-size:150%;
+    font-size/*!*/:x-large
+}
+.yjL{
+    font-size:medium;
+    voice-family:"\"}\"";
+    voice-family:inherit;
+    font-size:large;
+    font-size /*!*/:medium
+}
+html>body .yjL{
+    font-size:120%;
+    font-size/*!*/:large
+}
+.yjM{
+    font-size:small;
+    voice-family:"\"}\"";
+    voice-family:inherit;
+    font-size:medium;
+    font-size /*!*/:small
+}
+html>body .yjM{
+    font-size:100%;
+    font-size/*!*/:medium
+}
+.yjMt{
+    font-size:small;
+    line-height:1.4em;
+    voice-family:"\"}\"";
+    voice-family:inherit;
+    font-size:medium;
+    font-size /*!*/:small
+}
+html>body .yjMt{
+font-size:100%;
+font-size/*!*/:medium
+}
+.yjS{
+font-size:x-small;
+voice-family:"\"
+}
+\"";
+voice-family:inherit;
+font-size:small;
+font-size /*!*/:x-small
+}
+html>body .yjS{
+font-size:84%;
+font-size/*!*/:small
+}
+.yjSt{
+font-size:x-small;
+line-height:1.3em;
+voice-family:"\"
+}
+\"";
+voice-family:inherit;
+font-size:small;
+font-size /*!*/:x-small
+}
+html>body .yjSt{
+font-size:84%;
+font-size/*!*/:small
+}
+.yjXS{
+font-size:xx-small;
+voice-family:"\"
+}
+\"";
+voice-family:inherit;
+font-size:x-small;
+font-size /*!*/:xx-small
+}
+html>body .yjXS{
+font-size:70%;
+font-size/*!*/:x-small
+}
+.yregclb:after{
+zoom:100%
+}
+.yregclb:after{
+content:".";
+display:block;
+font-size:0;
+line-height:0;
+height:0;
+clear:both;
+visibility:hidden
+}
+.offLeft{
+position:absolute;
+left:-9999px;
+width:9999px
+}
+body{
+margin:0;
+padding:0;
+color:#333;
+text-align:center
+}
+.yregwp{
+width:950px;
+margin:0 auto;
+text-align:left
+}
+#msthd{
+width:100%;
+margin:13px auto 9px;
+line-height:1.22!important
+}
+#msthd:after{
+content:"";
+display:block;
+clear:both
+}
+#msthd div,#msthd p,#msthd ul,#msthd li{
+list-style:none;
+margin:0;
+padding:0;
+font-size:small
+}
+#msthd a img{
+border:0
+}
+#msthd .logo{
+float:left;
+padding:0 10px 5px 5px
+}
+#msthd .msthdtxt{
+float:left;
+position:relative;
+z-index:1;
+min-height:2.4em;
+margin:6px 0 0;
+width:50%
+}
+#msthd .b{
+font-weight:bold
+}
+#msthd .msthdlink{
+position:relative;
+float:right;
+width:60%
+}
+#msthd .msthdlink ul{
+float:right;
+margin-top:.8em;
+text-align:right
+}
+#msthd .msthdlink ul li.ytop{
+float:left;
+padding-right:5px
+}
+#msthd .msthdlink ul li.help{
+display:block;
+float:left;
+margin-left:5px
+}
+#msthd .msthdlink .compo{
+float:right;
+clear:both;
+width:100%;
+margin:7px 0 0 0;
+text-align:right
+}
+#msthd .msthdlink .compo .bn{
+float:right;
+width:70px
+}
+#msthd .msthdlink .compo .txt{
+float:right;
+margin:.6em 5px 0 0
+}
+#yregmst{
+position:relative;
+width:950px;
+margin:0 0 12px
+}
+#yregmst .yjmth{
+margin-top:12px
+}
+#yregct{
+position:relative;
+margin-bottom:2.2em;
+padding:0
+}
+#yreglg{
+position:absolute;
+top:10px;
+right:10px;
+padding:0;
+width:275px;
+margin:0 0 10px
+}
+#yregtctx #yregtxt{
+margin:0
+}
+#loginpanel{
+margin:0 300px 100px 0
+}
+#yregtxt dl{
+margin-bottom:140px
+}
+#loginpanel dl{
+margin:0;
+border:1px solid #DDD
+}
+#loginpanel .prTitle{
+margin:0;
+padding:3px 0;
+background:#DDD;
+color:#888;
+font-size:80%;
+font-weight:bold;
+text-align:center
+}
+#loginpanel .LPImg{
+margin:0;
+padding:15px 0;
+text-align:center
+}
+#loginpanel .LPImg img{
+vertical-align:bottom
+}
+#loginpanel .LPText{
+margin:2px;
+padding:2px;
+text-align:center
+}
+dd.LPImg{
+margin-right:300px
+}
+#yregtxt{
+padding-top:1px
+}
+#yregtxt embed{
+margin-top:-1px
+}
+#yregtxt object{
+margin-top:-1px
+}
+#yregtxt table{
+width:640px;
+margin-top:10px;
+margin-left:10px;
+margin-right:300px;
+margin-bottom:3em;
+*margin-bottom:6.5em;
+_margin-bottom:3em
+}
+#yreghtxt{
+padding:10px 0 0 10px
+}
+#yregtctx #yreghtxt{
+height:480px;
+margin-right:300px
+}
+#yregtgen #yregtxt{
+margin:0 285px 0 0
+}
+#yregtgen #yregct{
+position:static;
+margin:0 10px 0 0;
+padding:0
+}
+#yregtgen #yreglg{
+float:right;
+position:static;
+top:0;
+right:0;
+padding-top:10px
+}
+#yregft{
+padding:10px 0 12px;
+border-top:1px solid #777;
+text-align:center
+}
+.prAreaBottom{
+margin-top:5px;
+margin-bottom:5px;
+padding-right:5px;
+text-align:right
+}
+.prAreaBottom ul{
+margin:0;
+padding:0
+}
+.prAreaBottom li{
+display:inline;
+padding-left:7px;
+border-left:1px solid #AAA
+}
+.prAreaBottom li.first{
+border:none
+}
+.prAreaBottom li img{
+vertical-align:middle
+}
+.prAreaBottom li span{
+padding-left:7px;
+vertical-align:middle
+}
+.yregbx{
+margin:0 0 10px
+}
+.yregbxi{
+padding:10px 12px;
+border:1px solid #ddd
+}
+.top .yregbxi{
+position:relative;
+padding:10px 12px;
+border:1px solid #ddd;
+background-color:#f9f9f9;
+z-index:0
+}
+#yregtxt #promoBox{
+border:1px solid #DDD
+}
+#yregtxt #promoBox .yregbxi{
+border:none
+}
+#yregtxt .yregbx{
+border-color:#ddd;
+background-color:#f5f5f5
+}
+#yregtxt ul{
+margin:0 0 10px;
+padding:0
+}
+#yregtxt li{
+list-style:none;
+margin:18px 0 0;
+padding:0
+}
+#yregtxt li cite{
+font-style:normal
+}
+#yreglg h1,#yreglg h2,#yreglg h3{
+line-height:130%;
+text-align:left
+}
+.top{
+margin-bottom:10px
+}
+#yreglg p{
+margin:0;
+padding:0
+}
+#yreglg fieldset,#yreglg form{
+margin:0;
+padding:0;
+background:none;
+border:0
+}
+.clearfix{
+*height:1%
+}
+.clearfix:after{
+display:block;
+clear:both;
+content:""
+}
+h1{
+display:none
+}
+h1.verify{
+display:block;
+margin:8px 0 10px
+}
+#yregloginfield .yreg_ipt{
+height:34px;
+margin-bottom:7px;
+padding:3px 0 3px 2px;
+border-width:1px;
+border-style:solid;
+border-radius:0;
+line-height:1;
+font-size:100%;
+height:28px\9;
+padding:6px 0 6px 2px\9;
+line-height:28px\9;
+*height:18px;
+*line-height:18px;
+-webkit-appearance:none
+}
+#yregloginfield .yreg_ipt:not(:target){
+height:34px;
+padding:3px 0 3px 2px;
+line-height:1
+}
+#yregloginfield #username{
+width:245px;
+_width:242px
+}
+#yregloginfield #passwd{
+width:245px;
+_width:242px
+}
+#yregloginfield{
+width:249px
+}
+#yregloginfield .formv{
+margin:0 0 15px 0;
+_margin:0 0 15px 10px;
+color:#555;
+font-weight:bold
+}
+#yregloginfield .cols{
+width:249px;
+margin-top:7px
+}
+#yregloginfield .cols .left{
+float:left;
+width:148px
+}
+#yregloginfield .cols .right{
+float:right;
+width:95px
+}
+.c01bd{
+border-color:#BBB
+}
+.btnLogin{
+display:block;
+width:249px;
+_width:246px;
+height:42px;
+_height:44px;
+margin-bottom:14px;
+border:1px solid #FFBD30;
+border-radius:0;
+background-color:#FFE587;
+background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#FFE27A),color-stop(1,#FFD348));
+background-image:-webkit-linear-gradient(top,#FFE27A,#FFD348);
+background-image:-moz-linear-gradient(top,#FFE27A,#FFD348);
+background-image:-o-linear-gradient(top,#FFE27A,#FFD348);
+background-image:linear-gradient(to bottom,#FFE27A,#FFD348);
+-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFE27A,endColorstr=#FFFFD348,GradientType=0)";
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFE27A,endColorstr=#FFFFD348,GradientType=0);
+font-family:"MS PGothic",Osaka,sans-serif;
+font-weight:bold;
+*line-height:1.1;
+cursor:pointer
+}
+.persistency{
+margin:0 0 7px
+}
+#persistent{
+margin:0 3px 0 0
+}
+#yregloginfield .placeholderWrp{
+position:relative;
+*position:static
+}
+#yregloginfield .placeholder{
+display:none;
+position:absolute;
+top:1px;
+right:1px;
+left:1px;
+z-index:1;
+height:34px;
+padding:3px 0 3px 4px;
+color:#666;
+font-size:100%;
+line-height:34px;
+white-space:nowrap
+}
+#yregloginfield span{
+-webkit-user-select:none;
+-moz-user-select:none;
+user-select:none
+}
+#yregloginfield span.show{
+display:block;
+*display:none
+}
+#yregloginfield span.focus{
+color:#AAA
+}
+#yregloginfield label.hide{
+display:block;
+height:0;
+*height:auto;
+overflow:hidden;
+*overflow:auto;
+text-indent:100%;
+*text-indent:0;
+white-space:nowrap;
+*white-space:nomal;
+*zoom:1
+}
+.yregertxt{
+margin:5px 0 12px
+}
+.yregertxt,#yreglg .yregertxt h2{
+color:#c00;
+font-size:96%
+}
+.yregertxt h2 span.help{
+font-weight:normal
+}
+.yregertxt .msg{
+color:#333;
+font-size:96%;
+line-height:1.5;
+word-break:break-all;
+word-wrap:break-word
+}
+#yregfl{
+margin:0 20px 20px
+}
+#yregfl p{
+margin:0 0 1em
+}
+#yregfl li{
+margin-bottom:10px
+}
+#yregtgen #yregtxt p.yregpti{
+margin:0 0 2px
+}
+#yregtgen #yregtxt p{
+margin:0 0 .8em
+}
+#yregtgen #yregtxt .yregbpt li{
+margin:0 0 10px 4px;
+padding:0 0 10px 22px;
+background:url("https://s.yimg.jp/images/login/reg06/purple_arrow.gif") no-repeat 1px 4px
+}
+#yregtgen #yregtxt #yreghtxt h2{
+color:#7A067F;
+margin-bottom:20px
+}
+#yregtgen #yregtxt #yreghtxt h3{
+margin:0 0 4px
+}
+#yregtgen #yregtxt #promoImg{
+float:right;
+margin:20px 10px 0
+}
+#captcha{
+margin-bottom:7px
+}
+.captchaImg{
+display:block;
+margin-bottom:7px;
+vertical-align:bottom
+}
+#captchaInstruction{
+display:block;
+height:1px
+}
+#yregloginfield #secword{
+width:244px;
+_width:241px
+}
+.links{
+list-style:none;
+margin-top:10px;
+padding:0
+}
+.links li{
+line-height:1.6
+}
+.links. .links .first{
+display:inline
+}
+.links .second{
+display:inline;
+margin-left:5px;
+padding-left:5px;
+border-left:1px solid #CCC
+}
+.links .ar{
+float:left
+}
+.links .getYid{
+float:right
+}
+#togglePh{
+font-size:12px
+}
+.tipView{
+display:block;
+position:relative;
+z-index:9999
+}
+.tipView .tipBody{
+display:inline-block;
+*display:inline;
+position:absolute;
+left:-20px;
+bottom:10px;
+width:auto;
+padding:8px;
+border:2px solid #f70;
+-webkit-border-radius:4px;
+-moz-border-radius:4px;
+border-radius:4px;
+background-color:#ffc;
+font-weight:normal;
+text-decoration:none;
+white-space:nowrap;
+*zoom:1
+}
+.tipView .tipBody strong{
+font-family:Helvetica,Arial
+}
+.tipView .tipBody .handle{
+position:absolute;
+right:2em;
+bottom:-10px;
+border-top:solid 10px #f70;
+border-left-width:0;
+border-right:solid 10px transparent;
+line-height:0
+}
+.tipView .tipBody .handle .handleInner{
+position:absolute;
+left:2px;
+bottom:5px;
+border-top:solid 5px #ffc;
+border-left-width:0;
+border-right:solid 5px transparent;
+line-height:0
+}
+#tipBtn a{
+padding:2px 4px;
+border:2px solid #999;
+background:#fff
+}
+#wall{
+height:800px;
+padding-top:1px
+}
+.wall #yreglg{
+padding-top:85px
+}
+.wall #contents{
+padding-bottom:47px
+}
+.wall #footer{
+width:100%
+}
+.wall #yregct{
+margin-bottom:0
+}
+.wall #yregtxt{
+padding-top:0
+}
+.wall #yregft{
+position:fixed;
+bottom:0;
+z-index:3;
+width:100%;
+height:26px;
+background:#FFF
+}
+.kids a{
+color:#39C
+}
+.kids #yregft{
+height:40px;
+line-height:1.3
+}
+.yjWordBreak{
+word-break:break-all;
+word-wrap:break-word
+}
+.wbr{
+clear:both;
+width:0;
+height:1px;
+margin-top:-1px;
+white-space:nowrap;
+float:left;
+display:block
+}
+.formv{
+width:232px
+}
+#EMG{
+text-align:center
+}
+#EMG table{
+margin:0 auto 12px!important;
+text-align:left
+}
+#EMG table table{
+margin:0!important
+}
+#notices .yregbxi{
+margin:18px 0 10px 10px
+}
+#notices .information{
+margin:18px 0 10px 0;
+padding:10px 12px;
+background:#F5F5F5
+}
+#notices strong.label{
+width:7.6em;
+float:left;
+padding-top:.2em;
+color:#900
+}
+#notices p{
+margin-left:9.3em;
+line-height:1.3em
+}
+#notices .info{
+margin:0 0 10px 0;
+padding:10px 10px 0
+}
+#notices .info .left{
+float:left;
+width:465px
+}
+#notices .info .right{
+float:right;
+width:465px
+}
+#notices .infoImg{
+display:inline-block;
+margin-right:4px;
+vertical-align:middle;
+*zoom:1;
+*display:inline
+}
+#notices .release{
+border:1px solid #7BBD7B;
+background:#EAF4EA
+}
+#notices .promo{
+border:1px solid #F1C67C;
+background:#FCF9E4
+}
+#notices .caution{
+border:1px solid #EDB8B8;
+background:#F9E6E6
+}
+#notices .trouble{
+padding:10px;
+border:1px solid #FFCC16;
+background:#FFFCCC;
+color:#C00;
+font-weight:bold
+}
+#notices .alert{
+border:1px solid #FFCC16;
+background:#FFFCCC;
+color:#C00;
+font-weight:bold
+}
+#notices .info .title{
+display:inline-block;
+width:400px;
+font-weight:bold;
+line-height:1.6;
+vertical-align:middle;
+*zoom:1;
+*display:inline
+}
+#notices .info p{
+margin-left:0
+}
+.betaNotes{
+padding:6px;
+background:#F0F0F0;
+border-top:1px solid #CCC;
+text-align:center
+}
+.wall .betaNotes{
+height:17px;
+margin:-10px 0 10px;
+border-top:none;
+border-bottom:1px solid #CCC
+}
+#yregtxt #promoBox{
+background-color:#fff
+}
+#promoBox div{
+display:block;
+position:relative;
+height:60px
+}
+#promoBox a.prImg{
+display:block;
+position:absolute;
+top:5px;
+left:9px;
+height:50px;
+width:50px;
+margin:0;
+padding:0
+}
+#promoBox p.prTxt{
+display:block;
+position:absolute;
+top:5px;
+left:70px;
+height:3.9em;
+width:367px;
+margin:0;
+padding:0;
+font-size:12px;
+line-height:1.3em
+}
+#prBox{
+width:416px
+}
+#prBox h2{
+color:#888;
+text-align:center;
+padding:2px;
+border-bottom:1px solid #ddd
+}
+#prBox .adImg{
+padding:7px;
+text-align:center;
+background-color:#fff
+}
+#prBox .adText{
+text-align:center;
+margin:0 0 2px;
+padding:7px 0 0;
+border-top:1px solid #ddd
+}
+#prBox .LPImg{
+padding:7px;
+text-align:center;
+background-color:#fff
+}
+#prBox .LPText{
+text-align:center;
+margin:0 0 2px;
+padding:7px 0 0;
+border-top:1px solid #ddd
+}
+#yregtgen #yregtxt h2,#yregtpopup #yregtxt h2,#yregpmtxt h3{
+margin:0
+}
+#yregtgen #yregtxt p.yregpti,#yregtpopup #yregtxt p.yregpti{
+margin:0 0 2px
+}
+#yregtpopup #yregtxt{
+margin-bottom:20px
+}
+#yregtgen #yregtxt #yreghtxt h3,#yregtpopup #yregtxt #yreghtxt h3{
+margin:0
+}
+#yregtgen #yregtxt p,#yregtpopup #yregtxt p{
+margin:0 0 .8em
+}
+#yregtgen #yregtxt .yregbpt li,#yregtpopup #yregtxt .yregbpt li{
+margin:0 0 10px 4px;
+padding:0 0 10px 22px;
+background:url("https://s.yimg.jp/images/login/reg06/purple_arrow.gif") no-repeat 1px 4px
+}
+/* MacIE5.0 fix for login box \*/ .top{
+position:relative
+}
+/**/ img.picture{
+border:2px solid
+}
+#security{
+display:none;
+position:absolute;
+top:-15px;
+left:-14px;
+z-index:1000;
+background-color:#a5a5a5
+}
+#security.noimage{
+left:-14px;
+top:-10px
+}
+#securityi{
+width:138px;
+position:relative;
+z-index:1;
+right:1px;
+bottom:1px;
+padding:10px 6px;
+background-color:#fff;
+border:1px solid #636363
+}
+#knob{
+position:absolute;
+top:30px;
+right:-10px;
+width:10px;
+height:18px;
+background:url("https://s.yimg.jp/images/login/reg06/sideknob.png") no-repeat top left
+}
+.noimage #knob{
+top:22px
+}
+#security p{
+padding-bottom:5px
+}
+#security ul{
+margin:5px 0 0;
+padding:0 5px 0 0;
+list-style:none
+}
+#security ul li{
+margin:0;
+padding:0 0 4px
+}
+#yregtgen #yregtxt .yregbpt li ul{
+margin:10px 0 0;
+padding:0 0 0 15px
+}
+#yregtgen #yregtxt .yregbpt li ul li{
+background:none;
+list-style:disc;
+margin:0 0 5px 0;
+padding:0
+}
+#yregtgen #yregtxt .yregbpt li h3{
+padding-bottom:.4em
+}
+#yreghtxt ul{
+margin-left:0
+}
+#yreghtxt ul.inlineHeaders li h3{
+display:inline
+}
+.addressbar{
+display:block;
+margin:1em 0 1em 0
+}
+.mono{
+font-weight:bold
+}
+/*\*//*/ #yregft{
+clear:both
+}
+#yreglg .yregbx{
+width:275px
+}
+/**/ .prTitle{
+font-size:80%;
+color:#888
+}
+.prBox .LPImg{
+margin:7px 0
+}
+.loginpanel .prBox .LPImg{
+margin:15px 0
+}
+.prBox .LPText{
+margin-top:2px;
+padding:2px
+}
+.prBox .adImg{
+margin:7px 0
+}
+.prBox .adText{
+margin-top:2px;
+padding:2px;
+background-color:#e8e8e8
+}
+.fadeIn,.fadeOut{
+-webkit-animation-fill-mode:both;
+-moz-animation-fill-mode:both;
+-ms-animation-fill-mode:both;
+-o-animation-fill-mode:both;
+animation-fill-mode:both;
+-webkit-animation-duration:1s;
+-moz-animation-duration:1s;
+-ms-animation-duration:1s;
+-o-animation-duration:1s;
+animation-duration:1s
+}
+@-webkit-keyframes fadeIn{
+0%{
+opacity:0
+}
+100%{
+opacity:.99
+}
+
+}
+@-moz-keyframes fadeIn{
+0%{
+opacity:0
+}
+100%{
+opacity:.99
+}
+
+}
+@-ms-keyframes fadeIn{
+0%{
+opacity:0
+}
+100%{
+opacity:.99
+}
+
+}
+@-o-keyframes fadeIn{
+0%{
+opacity:0
+}
+100%{
+opacity:.99
+}
+
+}
+@keyframes fadeIn{
+0%{
+opacity:0
+}
+100%{
+opacity:.99
+}
+
+}
+.fadeIn{
+-webkit-animation-name:fadeIn;
+-moz-animation-name:fadeIn;
+-ms-animation-name:fadeIn;
+-o-animation-name:fadeIn;
+animation-name:fadeIn
+}
+@-webkit-keyframes fadeOut{
+0%{
+opacity:.99
+}
+100%{
+opacity:0
+}
+
+}
+@-moz-keyframes fadeOut{
+0%{
+opacity:.99
+}
+100%{
+opacity:0
+}
+
+}
+@-ms-keyframes fadeOut{
+0%{
+opacity:.99
+}
+100%{
+opacity:0
+}
+
+}
+@-o-keyframes fadeOut{
+0%{
+opacity:.99
+}
+100%{
+opacity:0
+}
+
+}
+@keyframes fadeOut{
+0%{
+opacity:.99
+}
+100%{
+opacity:0
+}
+
+}
+.fadeOut{
+-webkit-animation-name:fadeOut;
+-moz-animation-name:fadeOut;
+-ms-animation-name:fadeOut;
+-o-animation-name:fadeOut;
+animation-name:fadeOut
+}
+ul,ol,li{
+margin:0;
+padding:0
+}
+ul li,ol li{
+list-style:none
+}
+#themeBox{
+padding:10px 12px;
+*zoom:1
+}
+#linksTheme{
+margin:0 0 8px;
+text-align:right;
+_display:none
+}
+#linksTheme li{
+height:22px;
+position:relative
+}
+#openTheme{
+display:block;
+overflow:hidden;
+position:absolute;
+right:0;
+width:54px;
+height:20px;
+_width:56px;
+_height:22px;
+border:1px solid transparent;
+background-image:url(https://s.yimg.jp/images/login/pc/img/login/1.0.0/theme_btn.png);
+background-repeat:no-repeat;
+background-position:0 0;
+_background-position:1px 1px;
+text-indent:100%;
+line-height:1;
+white-space:nowrap
+}
+html:not(:target) #openTheme{
+background-image:url(https://s.yimg.jp/images/login/pc/img/login/1.0.0/theme_btn_2x.png);
+-webkit-background-size:54px 20px;
+-moz-background-size:54px 20px;
+-o-background-size:54px 20px;
+background-size:54px 20px
+}
+.c01 #openTheme{
+border:1px solid #ddd
+}
+.yregertxt{
+padding:4px;
+background:#fff;
+background:rgba(255,255,255,0.7);
+*zoom:1
+}
+#themeArea{
+display:block;
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+margin:0;
+_width:273px;
+z-index:-2;
+*zoom:1
+}
+#bgLayer{
+display:block;
+position:absolute;
+top:100px;
+bottom:0;
+left:0;
+right:0;
+background-color:#fff;
+z-index:-1;
+opacity:.90;
+-ms-filter:"alpha(opacity=90)";
+filter:alpha(opacity=90);
+*zoom:1
+}
+#bgGradLayer{
+display:block;
+position:absolute;
+top:0;
+left:0;
+right:0;
+height:100px;
+background-image:none;
+background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(255,255,255,0.1)),color-stop(1,rgba(255,255,255,0.90)));
+background-image:-webkit-linear-gradient(top,rgba(255,255,255,0.1),rgba(255,255,255,0.90));
+background-image:-moz-linear-gradient(top,rgba(255,255,255,0.1),rgba(255,255,255,0.90));
+background-image:-o-linear-gradient(top,rgba(255,255,255,0.1),rgba(255,255,255,0.90));
+background-image:linear-gradient(to bottom,rgba(255,255,255,0.1),rgba(255,255,255,0.90));
+-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#19ffffff,endColorstr=#e5ffffff,GradientType=0)";
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#19ffffff,endColorstr=#e5ffffff,GradientType=0);
+z-index:-1;
+*zoom:1
+}
+.themeBtnClose{
+position:absolute;
+top:-26px;
+right:-24px;
+_right:-12px;
+overflow:hidden;
+width:28px;
+height:28px;
+background-image:url(https://s.yimg.jp/images/login/pc/img/login/1.0.0/theme_ico_close.png);
+background-position:0 0;
+background-repeat:no-repeat;
+text-indent:100%;
+white-space:nowrap;
+z-index:9999;
+cursor:pointer
+}
+.icoPlus{
+overflow:hidden;
+width:24px;
+height:24px;
+margin:0 auto 8px;
+background-image:url(https://s.yimg.jp/images/login/pc/img/login/1.0.0/theme_ico_plus.png);
+background-position:0 0;
+background-repeat:no-repeat;
+text-indent:100%;
+white-space:nowrap
+}
+html:not(:target) .themeBtnClose{
+background-image:url(https://s.yimg.jp/images/login/pc/img/login/1.0.0/theme_ico_close_2x.png);
+-webkit-background-size:26px 26px;
+-moz-background-size:26px 26px;
+-o-background-size:26px 26px;
+background-size:26px 26px
+}
+html:not(:target) .icoPlus{
+background-image:url(https://s.yimg.jp/images/login/pc/img/login/1.0.0/theme_ico_plus_2x.png);
+-webkit-background-size:24px 24px;
+-moz-background-size:24px 24px;
+-o-background-size:24px 24px;
+background-size:24px 24px
+}
+#themeSettingBg{
+display:none;
+*zoom:1
+}
+#themeSettingBg.show{
+display:block;
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+width:100%;
+_height:480px;
+background:#fff;
+background:rgba(255,255,255,0);
+z-index:9;
+-ms-filter:"alpha(opacity=0)";
+filter:alpha(opacity=0)
+}
+#panelSetTheme{
+display:none;
+position:absolute;
+top:50%;
+left:50%;
+width:436px;
+-webkit-box-shadow:1px 1px 4px rgba(0,0,0,0.4);
+box-shadow:1px 1px 4px rgba(0,0,0,0.4);
+margin-top:-162px;
+_margin-top:-200px;
+margin-left:-230px;
+*border:1px solid #ddd;
+background:#fff;
+z-index:999;
+pointer-events:auto;
+padding:16px 12px;
+*zoom:1
+}
+.wall #panelSetTheme{
+top:30%
+}
+#panelSetTheme.loading{
+background:#FFF url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/ico_loading48.gif) 210px 110px no-repeat
+}
+#panelSetTheme.loading #loadingMsg{
+position:relative;
+width:100%
+}
+#panelSetTheme.loading #loadingMsg .text{
+position:absolute;
+top:-130px;
+left:198px;
+color:#999
+}
+#panelSetTheme h2{
+display:none
+}
+#panelSetTheme .helpLink{
+float:right;
+margin:1.4em 6px 0 0;
+font-size:14px
+}
+#panelSetTheme.open{
+display:block
+}
+#panelSetTheme .wrp{
+position:relative;
+margin:0;
+animation-fill-mode:both;
+-webkit-animation-fill-mode:both;
+-moz-animation-fill-mode:both;
+-ms-animation-fill-mode:both;
+-o-animation-fill-mode:both;
+animation-duration:.8s;
+-webkit-animation-duration:.8s;
+-moz-animation-duration:.8s;
+-ms-animation-duration:.8s;
+-o-animation-duration:.8s
+}
+#panelSetTheme.open .wrp{
+visibility:visible;
+animation-name:fadeIn;
+-webkit-animation-name:fadeIn;
+-moz-animation-name:fadeIn;
+-ms-animation-name:fadeIn;
+-o-animation-name:fadeIn
+}
+#panelSetTheme.loading .wrp{
+visibility:hidden
+}
+@keyframes fadeIn{
+0%{
+opacity:0
+}
+100%{
+opacity:1
+}
+
+}
+@-webkit-keyframes fadeIn{
+0%{
+opacity:0
+}
+100%{
+opacity:1
+}
+
+}
+@-moz-keyframes fadeIn{
+0%{
+opacity:0
+}
+100%{
+opacity:1
+}
+
+}
+@-ms-keyframes fadeIn{
+0%{
+opacity:0
+}
+100%{
+opacity:1
+}
+
+}
+@-o-keyframes fadeIn{
+0%{
+opacity:0
+}
+100%{
+opacity:1
+}
+
+}
+#panelSetTheme h3{
+float:left;
+margin-bottom:10px;
+padding-left:5px;
+border-left:4px solid #CCC;
+font-size:1em;
+font-weight:normal;
+line-height:1.2
+}
+#panelSetTheme .options div{
+float:left;
+width:37px;
+margin-left:3px;
+margin-bottom:4px;
+padding:1px;
+border:3px solid #FFF
+}
+#panelSetTheme .options span{
+display:block;
+-webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+#color,#texture{
+clear:both;
+margin-bottom:4px
+}
+#panelSetTheme #color span{
+width:37px;
+height:25px
+}
+#panelSetTheme #texture span{
+width:35px;
+height:23px;
+border:1px solid #999
+}
+#panelSetTheme .options .active{
+border:3px solid #8093B3
+}
+.item{
+cursor:pointer
+}
+.item.active{
+cursor:default
+}
+.themeBtnWrap{
+width:220px;
+margin:0 auto
+}
+.themeBtn{
+display:block;
+width:100px;
+height:36px;
+margin:0 auto;
+border:1px solid #bbb;
+background-color:#eee;
+background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#fff),color-stop(1,#eee));
+background-image:-webkit-linear-gradient(top,#fff,#eee);
+background-image:-moz-linear-gradient(top,#fff,#eee);
+background-image:-o-linear-gradient(top,#fff,#eee);
+background-image:linear-gradient(to bottom,#fff,#eee);
+-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFFFF,endColorstr=#FFEEEEEE,GradientType=0)";
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFFFF,endColorstr=#FFEEEEEE,GradientType=0);
+color:#000;
+font-size:16px;
+line-height:36px;
+text-align:center
+}
+#btnSave.disabled{
+cursor:default;
+color:#AAA
+}
+#texture span{
+background:#FFF url(https://s.yimg.jp/images/login/pc/img/login/theme/items.png) 0 0 no-repeat
+}
+#texture .options #t64,#texture .options #t31,#texture .options #t14,#texture .options #t65,#texture .options #t35,#texture .options #t59,#texture .options #t60,#texture .options #t61,#texture .options #t63{
+background-image:url(https://s.yimg.jp/images/login/pc/img/login/theme/items12.png)
+}
+.options #c01{
+border:1px solid #999;
+background-color:#f9f9f9
+}
+#panelSetTheme #color span#c01{
+width:35px;
+height:23px
+}
+.options #c02{
+background-color:#ACC2C8
+}
+.options #c03{
+background-color:#666
+}
+.options #c04{
+background-color:#000
+}
+.options #c05{
+background-color:#630
+}
+.options #c06{
+background-color:#002060
+}
+.options #c07{
+background-color:#C00000
+}
+.options #c08{
+background-color:#F66
+}
+.options #c09{
+background-color:#F69B00
+}
+.options #c10{
+background-color:#16914E
+}
+.options #c11{
+background-color:#0070C0
+}
+.options #c12{
+background-color:#7030A0
+}
+.options #c13{
+background-color:#FFD2CF
+}
+.options #c14{
+background-color:#F1EC61
+}
+.options #c15{
+background-color:#B5F689
+}
+.options #c16{
+background-color:#B1EAFA
+}
+.options #c17{
+background-color:#B1584D
+}
+.options #c18{
+background-color:#B0BC5C
+}
+.options #c19{
+background-color:#58969D
+}
+.options #c20{
+background-color:#8888D7
+}
+.options #c21{
+background-color:#5A1F31
+}
+.options #c22{
+background-color:#3D3702
+}
+.options #c23{
+background-color:#09390F
+}
+.options #c24{
+background-color:#31104A
+}
+.options #t01{
+background:#FFF
+}
+.options #t02{
+background-position:0 0
+}
+.options #t03{
+background-position:0 -50px
+}
+.options #t04{
+background-position:0 -100px
+}
+.options #t39{
+background-position:0 -150px
+}
+.options #t06{
+background-position:0 -200px
+}
+.options #t07{
+background-position:0 -250px
+}
+.options #t08{
+background-position:0 -300px
+}
+.options #t09{
+background-position:0 -350px
+}
+.options #t10{
+background-position:0 -400px
+}
+.options #t40{
+background-position:0 -450px
+}
+.options #t41{
+background-position:0 -500px
+}
+.options #t15{
+background-position:0 -550px
+}
+.options #t16{
+background-position:0 -600px
+}
+.options #t42{
+background-position:0 -650px
+}
+.options #t18{
+background-position:0 -700px
+}
+.options #t43{
+background-position:0 -750px
+}
+.options #t20{
+background-position:0 -800px
+}
+.options #t21{
+background-position:0 -850px
+}
+.options #t44{
+background-position:0 -900px
+}
+.options #t23{
+background-position:0 -950px
+}
+.options #t24{
+background-position:0 -1000px
+}
+.options #t25{
+background-position:0 -1050px
+}
+.options #t26{
+background-position:0 -1100px
+}
+.options #t27{
+background-position:0 -1150px
+}
+.options #t28{
+background-position:0 -1200px
+}
+.options #t45{
+background-position:0 -1250px
+}
+.options #t30{
+background-position:0 -1300px
+}
+.options #t46{
+background-position:0 -1350px
+}
+.options #t47{
+background-position:0 -1400px
+}
+.options #t48{
+background-position:0 -1450px
+}
+.options #t49{
+background-position:0 -1500px
+}
+.options #t50{
+background-position:0 -1550px
+}
+.options #t36{
+background-position:0 -1600px
+}
+.options #t37{
+background-position:0 -1650px
+}
+.options #t38{
+background-position:0 -1700px
+}
+.options #t64{
+background-position:0 0
+}
+.options #t31{
+background-position:0 -50px
+}
+.options #t14{
+background-position:0 -100px
+}
+.options #t65{
+background-position:0 -150px
+}
+.options #t35{
+background-position:0 -200px
+}
+.options #t59{
+background-position:0 -250px
+}
+.options #t60{
+background-position:0 -300px
+}
+.options #t61{
+background-position:0 -350px
+}
+.options #t63{
+background-position:0 -400px
+}
+.c01{
+background-color:#f9f9f9
+}
+.c02{
+background-color:#ACC2C8
+}
+.c03{
+background-color:#666
+}
+.c04{
+background-color:#000
+}
+.c05{
+background-color:#630
+}
+.c06{
+background-color:#002060
+}
+.c07{
+background-color:#C00000
+}
+.c08{
+background-color:#F66
+}
+.c09{
+background-color:#F69B00
+}
+.c10{
+background-color:#16914E
+}
+.c11{
+background-color:#0070C0
+}
+.c12{
+background-color:#7030A0
+}
+.c13{
+background-color:#FFD2CF
+}
+.c14{
+background-color:#F1EC61
+}
+.c15{
+background-color:#B5F689
+}
+.c16{
+background-color:#B1EAFA
+}
+.c17{
+background-color:#B1584D
+}
+.c18{
+background-color:#B0BC5C
+}
+.c19{
+background-color:#58969D
+}
+.c20{
+background-color:#8888D7
+}
+.c21{
+background-color:#5A1F31
+}
+.c22{
+background-color:#3D3702
+}
+.c23{
+background-color:#09390F
+}
+.c24{
+background-color:#31104A
+}
+.c01bd{
+border-color:#BBB
+}
+.c02bd{
+border-color:#ACC2C8
+}
+.c03bd{
+border-color:#666
+}
+.c04bd{
+border-color:#000
+}
+.c05bd{
+border-color:#630
+}
+.c06bd{
+border-color:#002060
+}
+.c07bd{
+border-color:#C00000
+}
+.c08bd{
+border-color:#F66
+}
+.c09bd{
+border-color:#F69B00
+}
+.c10bd{
+border-color:#16914E
+}
+.c11bd{
+border-color:#0070C0
+}
+.c12bd{
+border-color:#7030A0
+}
+.c13bd{
+border-color:#FFD2CF
+}
+.c14bd{
+border-color:#F1EC61
+}
+.c15bd{
+border-color:#B5F689
+}
+.c16bd{
+border-color:#B1EAFA
+}
+.c17bd{
+border-color:#B1584D
+}
+.c18bd{
+border-color:#B0BC5C
+}
+.c19bd{
+border-color:#58969D
+}
+.c20bd{
+border-color:#8888D7
+}
+.c21bd{
+border-color:#5A1F31
+}
+.c22bd{
+border-color:#3D3702
+}
+.c23bd{
+border-color:#09390F
+}
+.c24bd{
+border-color:#31104A
+}
+.t01{
+background-image:none
+}
+.t02{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_dot_a.png)
+}
+.t03{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_star.png)
+}
+.t04{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_geometry.png)
+}
+.t05{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_dot_c.png)
+}
+.t06{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_camouflaged.png)
+}
+.t07{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_plaid.png)
+}
+.t08{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_stripe.png)
+}
+.t09{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_leopard.png)
+}
+.t10{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_zebra.png)
+}
+.t13{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_momiji_35.png)
+}
+.c01 .t13,.c13 .t13,.c14 .t13,.c15 .t13,.c16 .t13{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_momiji_60.png)
+}
+.c21 .t13,.c22 .t13,.c23 .t13,.c24 .t13{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_momiji_20.png)
+}
+.t14{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_xmas_tree_35.png)
+}
+.c01 .t14,.c13 .t14,.c14 .t14,.c15 .t14,.c16 .t14{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_xmas_tree_60.png)
+}
+.c21 .t14,.c22 .t14,.c23 .t14,.c24 .t14{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_xmas_tree_20.png)
+}
+.t15{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_mizutama_35.png)
+}
+.c01 .t15,.c13 .t15,.c14 .t15,.c15 .t15,.c16 .t15{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_mizutama_60.png)
+}
+.c21 .t15,.c22 .t15,.c23 .t15,.c24 .t15{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_mizutama_20.png)
+}
+.t16{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_mizutama_rev_35.png)
+}
+.c01 .t16,.c13 .t16,.c14 .t16,.c15 .t16,.c16 .t16{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_mizutama_rev_60.png)
+}
+.c21 .t16,.c22 .t16,.c23 .t16,.c24 .t16{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_mizutama_rev_20.png)
+}
+.t17{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_dot_big_rev_35.png)
+}
+.c01 .t17,.c13 .t17,.c14 .t17,.c15 .t17,.c16 .t17{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_dot_big_rev_60.png)
+}
+.c21 .t17,.c22 .t17,.c23 .t17,.c24 .t17{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_dot_big_rev_20.png)
+}
+.t18{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_check_35.png)
+}
+.c01 .t18,.c13 .t18,.c14 .t18,.c15 .t18,.c16 .t18{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_check_60.png)
+}
+.c21 .t18,.c22 .t18,.c23 .t18,.c24 .t18{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_check_20.png)
+}
+.t19{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_check_b_35.png)
+}
+.c01 .t19,.c13 .t19,.c14 .t19,.c15 .t19,.c16 .t19{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_check_b_60.png)
+}
+.c21 .t19,.c22 .t19,.c23 .t19,.c24 .t19{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_check_b_20.png)
+}
+.t20{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_stripe_35.png)
+}
+.c01 .t20,.c13 .t20,.c14 .t20,.c15 .t20,.c16 .t20{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_stripe_60.png)
+}
+.c21 .t20,.c22 .t20,.c23 .t20,.c24 .t20{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_stripe_20.png)
+}
+.t21{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_tirolian_35.png)
+}
+.c01 .t21,.c13 .t21,.c14 .t21,.c15 .t21,.c16 .t21{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_tirolian_60.png)
+}
+.c21 .t21,.c22 .t21,.c23 .t21,.c24 .t21{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_tirolian_20.png)
+}
+.t22{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_dot_bms_35.png)
+}
+.c01 .t22,.c13 .t22,.c14 .t22,.c15 .t22,.c16 .t22{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_dot_bms_60.png)
+}
+.c21 .t22,.c22 .t22,.c23 .t22,.c24 .t22{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_dot_bms_20.png)
+}
+.t23{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_chidori_35.png)
+}
+.c01 .t23,.c13 .t23,.c14 .t23,.c15 .t23,.c16 .t23{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_chidori_60.png)
+}
+.c21 .t23,.c22 .t23,.c23 .t23,.c24 .t23{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_chidori_20.png)
+}
+.t24{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_check_diagonal_35.png)
+}
+.c01 .t24,.c13 .t24,.c14 .t24,.c15 .t24,.c16 .t24{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_check_diagonal_60.png)
+}
+.c21 .t24,.c22 .t24,.c23 .t24,.c24 .t24{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_check_diagonal_20.png)
+}
+.t25{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_dot_mixed_35.png)
+}
+.c01 .t25,.c13 .t25,.c14 .t25,.c15 .t25,.c16 .t25{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_dot_mixed_60.png)
+}
+.c21 .t25,.c22 .t25,.c23 .t25,.c24 .t25{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_dot_mixed_20.png)
+}
+.t26{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_stripe_diagonal_35.png)
+}
+.c01 .t26,.c13 .t26,.c14 .t26,.c15 .t26,.c16 .t26{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_stripe_diagonal_60.png)
+}
+.c21 .t26,.c22 .t26,.c23 .t26,.c24 .t26{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_stripe_diagonal_20.png)
+}
+.t27{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_dot_color_35.png)
+}
+.c01 .t27,.c13 .t27,.c14 .t27,.c15 .t27,.c16 .t27{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_dot_color_60.png)
+}
+.c21 .t27,.c22 .t27,.c23 .t27,.c24 .t27{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_dot_color_20.png)
+}
+.t28{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_valentine_35.png)
+}
+.c01 .t28,.c13 .t28,.c14 .t28,.c15 .t28,.c16 .t28{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_valentine_60.png)
+}
+.c21 .t28,.c22 .t28,.c23 .t28,.c24 .t28{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_valentine_20.png)
+}
+.t29{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_star_2_35.png)
+}
+.c01 .t29,.c13 .t29,.c14 .t29,.c15 .t29,.c16 .t29{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_star_2_60.png)
+}
+.c21 .t29,.c22 .t29,.c23 .t29,.c24 .t29{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_star_2_20.png)
+}
+.t30{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_star_3_35.png)
+}
+.c01 .t30,.c13 .t30,.c14 .t30,.c15 .t30,.c16 .t30{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_star_3_60.png)
+}
+.c21 .t30,.c22 .t30,.c23 .t30,.c24 .t30{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_star_3_20.png)
+}
+.t31{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_xmas_35.png)
+}
+.c01 .t31,.c13 .t31,.c14 .t31,.c15 .t31,.c16 .t31{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_xmas_60.png)
+}
+.c21 .t31,.c22 .t31,.c23 .t31,.c24 .t31{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_xmas_20.png)
+}
+.t32{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_snow_35.png)
+}
+.c01 .t32,.c13 .t32,.c14 .t32,.c15 .t32,.c16 .t32{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_snow_60.png)
+}
+.c21 .t32,.c22 .t32,.c23 .t32,.c24 .t32{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_snow_20.png)
+}
+.t33{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_kago_35.png)
+}
+.c01 .t33,.c13 .t33,.c14 .t33,.c15 .t33,.c16 .t33{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_kago_60.png)
+}
+.c21 .t33,.c22 .t33,.c23 .t33,.c24 .t33{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_kago_20.png)
+}
+.t34{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_tsuru_35.png)
+}
+.c01 .t34,.c13 .t34,.c14 .t34,.c15 .t34,.c16 .t34{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_tsuru_60.png)
+}
+.c21 .t34,.c22 .t34,.c23 .t34,.c24 .t34{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_tsuru_20.png)
+}
+.t35{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_shogatsu_35.png)
+}
+.c01 .t35,.c13 .t35,.c14 .t35,.c15 .t35,.c16 .t35{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_shogatsu_60.png)
+}
+.c21 .t35,.c22 .t35,.c23 .t35,.c24 .t35{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_shogatsu_20.png)
+}
+.t36{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_nami_35.png)
+}
+.c01 .t36,.c13 .t36,.c14 .t36,.c15 .t36,.c16 .t36{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_nami_60.png)
+}
+.c21 .t36,.c22 .t36,.c23 .t36,.c24 .t36{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_nami_20.png)
+}
+.t37{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_kiku_35.png)
+}
+.c01 .t37,.c13 .t37,.c14 .t37,.c15 .t37,.c16 .t37{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_kiku_60.png)
+}
+.c21 .t37,.c22 .t37,.c23 .t37,.c24 .t37{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_kiku_20.png)
+}
+.t38{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_sakura_35.png)
+}
+.c01 .t38,.c13 .t38,.c14 .t38,.c15 .t38,.c16 .t38{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_sakura_60.png)
+}
+.c21 .t38,.c22 .t38,.c23 .t38,.c24 .t38{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_sakura_20.png)
+}
+.t39{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_childrens_day.png)
+}
+.t40{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_carnation.png)
+}
+.t41{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_rainy_season.png)
+}
+.t42{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_goldfish.png)
+}
+.t43{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_fireworks.png)
+}
+.t44{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_natsu_matsuri.png)
+}
+.t45{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_watermelon.png)
+}
+.t46{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_kakigori.png)
+}
+.t47{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_ice_cream.png)
+}
+.t48{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_cherry.png)
+}
+.t49{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_windmill.png)
+}
+.t50{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_skull.png)
+}
+.t51{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_strawberry.png)
+}
+.t52{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_paisley.png)
+}
+.t53{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_leaf.png)
+}
+.t54{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_mushroom.png)
+}
+.t55{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_piano.png)
+}
+.t56{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_lotus.png)
+}
+.t57{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_halloween.png)
+}
+.t58{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_chestnut.png)
+}
+.t59{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_argyle.png)
+}
+.t60{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_jacquard1.png)
+}
+.t61{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_jacquard2.png)
+}
+.t62{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_paper.png)
+}
+.t63{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_native.png)
+}
+.t64{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_reindeer.png)
+}
+.t65{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_shogatsu_matsuri.png)
+}
+.t66{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_setsubun.png)
+}
+.t67{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_valentine2.png)
+}
+.t68{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_hinamatsuri.png)
+}
+.t69{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_tulip.png)
+}
+.t70{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.2.1/texture_nyugakushiki.png)
+}
+.t11{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.0.0/texture_oxhide.png)
+}
+.t12{
+background-image:url(https://s.yimg.jp/images/login/sp/img/theme/1.0.0/texture_stone.png)
+}

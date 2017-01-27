@@ -13,7 +13,8 @@
     <meta name="description" content="XAMPP is an easy to install Apache distribution containing MariaDB, PHP and Perl." />
     <meta name="keywords" content="xampp, apache, php, perl, mariadb, open source distribution" />
 
-    <link href="/dashboard/stylesheets/normalize.css" rel="stylesheet" type="text/css" /><link href="/dashboard/stylesheets/all.css" rel="stylesheet" type="text/css" />
+    <link href="/dashboard/stylesheets/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="/dashboard/stylesheets/all.css" rel="stylesheet" type="text/css" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
   </head>

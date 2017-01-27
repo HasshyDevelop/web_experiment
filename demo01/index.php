@@ -1,33 +1,28 @@
 <?php
     require_once 'modules/require.php';
 
+    //ヘッダー出力
+    hrml_head();
 
-    //初期化
-    $G_HTML_TITLE = "DEMO 01 TOP PAGE";
-    $G_HTML_STYLESHEET = NULL;
+    //TOP メニュー
+    html_top_menu();
 
-//    require_once 'init.php';
-    fcWriteHmtlHeader();
+    //コンテンツ
+    contents_start();
+    html_left_contents();
 
-    fcGetThreadList();
+    print "<div id=\"main\">";
+    print "<H1>TEST</H1>";
+    print "</div>";
 
-    fcWriteThread();
-/*
-    $objSmarty->assign('tpl_name_head','head.tpl');
-    $objSmarty->assign('tpl_name_main','home/main.tpl');
+    //コンテンツ
+    html_right_contents();
+    contents_end();
 
-    $arrCss             = array($G_DIR_ROOT.'data/style/default/css/import.css'
-                               ,'http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/'.JQUERY_THEME.'/jquery-ui.css');
-    $arrJs              = array('http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'
-                               ,'http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js'
-                               ,'http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js');
-    $arrSerchDayParam   = array('showButtonPanel: true'
-                               ,',dateFormat: "yy/mm/dd"'
-                               ,',minDate:    "d"'
-                               ,',showAnim:         "fadeIn"'
-                                );
+    //フッター出力
+    hrml_foot();
 
-*/
+    //DB クローズ
+    $G_MY_SQLI->close();
+
 ?>
-
-

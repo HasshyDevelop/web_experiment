@@ -1,1 +1,0 @@
-<html lang="ja">  <head>    <meta charset="utf-8">    <title>DEMO 001</title>    <link href="/demo01/modules/css/base.css" rel="stylesheet" type="text/css" />  </head>  <body>
