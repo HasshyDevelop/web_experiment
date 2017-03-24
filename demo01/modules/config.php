@@ -4,7 +4,7 @@
 define('DB_USER'       , 'root');
 define('DB_PASSWORD'   , '');
 define('DB_SERVER'     , 'localhost');
-define('DB_NAME'       , 'mydb');
+define('DB_NAME'       , 'db_demo01');
 define('DB_TYPE'       , 'mysql');
 define('DB_DECODE_KEY' , 'KEY');
 
@@ -47,7 +47,7 @@ define('MIN_THREAD' ,  200);
 define('DEL_TXT_MIN' ,  80);       //短すぎる文字削除用
 define('DEL_TXT_LNG' ,  500);      //長すぎる文字削除用
 //_FILE PATH
-define('PATH_TPL' ,  '/../tpl/');
+define('PATH_TPL' ,  './modules/tpl/');
 //CODE
 define('ERR_CD_NODATA' ,  'no_data');
 define('SORT_CD_DEF'   ,  '00000');

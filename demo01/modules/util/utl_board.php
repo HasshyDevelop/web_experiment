@@ -92,7 +92,7 @@ class utl_board {
             }
         }else{
             //廃止された板はスルー
-            continue;
+//            continue;
         }
         //ファイルを閉める
         fclose($thread_list);

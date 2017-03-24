@@ -59,7 +59,7 @@
   <div class="large-12 columns">
           <ul class="left">
               <li class=""><h2><a href="./demo01/">デモ　01</a></h2></li>
-              <li class=""><h2>デモ　02</h2></li>
+              <li class=""><h2><a href="./demo02/">デモ　02</a></h2></li>
               <li class=""><h2>デモ　03</h2></li>
               <li class=""><h2>デモ　04</h2></li>
               <li class=""><h2>デモ　05</h2></li>
