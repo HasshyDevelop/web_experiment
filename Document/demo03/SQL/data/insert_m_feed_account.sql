@@ -4,8 +4,8 @@ INSERT INTO m_feed_account VALUES('twipple','ついっぷるトレンド HOTワ�
 
 
 
-INSERT INTO m_feed_account VALUES('newsplus01','ニュース速報+:2ch勢いランキング','http://2ch-ranking.net/rss/newsplus.rdf','newsplus',1,DATE_FORMAT(now(),'%Y/%m/%d'));
-INSERT INTO m_feed_account VALUES('newsplus02','２ちゃんねる勢いランキング ニュース勢いTOP50','http://www.ikioi2ch.net/rss/single/news.xml','newsplus',2,DATE_FORMAT(now(),'%Y/%m/%d'));
+INSERT INTO m_feed_account VALUES('newsplus01','ニュース速報+:2ch勢いランキング','http://2ch-ranking.net/rss/newsplus.rdf','newsplus',1,NULL,DATE_FORMAT(now(),'%Y/%m/%d'));
+INSERT INTO m_feed_account VALUES('newsplus02','２ちゃんねる勢いランキング ニュース勢いTOP50','http://www.ikioi2ch.net/rss/single/news.xml','newsplus',2,NULL,DATE_FORMAT(now(),'%Y/%m/%d'));
 
 
 料理:2ch勢いランキング

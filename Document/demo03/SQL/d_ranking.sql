@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `d_ranking` (
     blg_id                  char(20)            NOT NULL,
     thread_id             varchar(100)      NOT NULL,
     max_rank             char(3)              NOT NULL,
-    point                   varchar(100)      NOT NULL,
+    point                   int(5)                 NOT NULL DEFAULT 0,
     update_date         char(15)            NOT NULL DEFAULT ''
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 --

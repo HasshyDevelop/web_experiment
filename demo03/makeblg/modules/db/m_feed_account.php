@@ -5,11 +5,14 @@ class db_m_feed_account {
     private $id;
     private $name;
     private $url;
-    private $sort;
+    private $blg_id;
+    private $make_ptn;
+    private $feed_date;
     private $update_date;
 
+
     private $tbl_name    = " m_feed_account";
-    private $tbl_columns = " id,name,url,blg_id, make_ptn, update_date";
+    private $tbl_columns = " id,name,url,blg_id, make_ptn, feed_date, update_date";
 
     //-----------------------------------------
     //変数クリア
@@ -20,23 +23,86 @@ class db_m_feed_account {
         $this->id           = "";
         $this->name         = "";
         $this->url          = "";
-        $this->sort         = "";
+        $this->blg_id       = "";
+        $this->make_ptn     = "";
+        $this->feed_date    = "";
         $this->update_date  = "";
     }
 
-
+    //データ・セット
     function set_id($val){
         $this->id  = $val;
     }
     function set_name($val){
-        $this->name  = "";
+        $this->name  = $val;
     }
     function set_url($val){
-        $this->url  = "";
+        $this->url  = $val;
     }
-    function set_sort($val){
-        $this->sort = "";
+    function set_blg_id($val){
+        $this->blg_id  = $val;
     }
+    function set_make_ptn($val){
+        $this->make_ptn  = $val;
+    }
+    function set_feed_date($val){
+        $this->feed_date  = $val;
+    }
+    function set_update_date($val){
+        $this->update_date  = $val;
+    }
+
+    //データ・返還
+    function get_id(){
+        return $this->id;
+    }
+    function get_name(){
+        return $this->name;
+    }
+    function get_url(){
+        return $this->url;
+    }
+    function get_blg_id(){
+        return $this->blg_id;
+    }
+    function get_make_ptn(){
+        return $this->make_ptn;
+    }
+    function get_feed_date(){
+        return $this->feed_date;
+    }
+
+
+
+    //-----------------------------------------
+    //-----------------------------------------
+    function upd_feed_date(){
+        global $G_MY_SQLI;
+        
+        //Debug情報をセット
+        $fcName = $this->tbl_name." upd_feed_date";
+
+        try{           //
+            $strSQL  = "";
+            $strSQL  = $strSQL . "UPDATE ".$this->tbl_name;
+            $strSQL  = $strSQL . " SET  feed_date = '".$this->feed_date."'";
+            $strSQL  = $strSQL . " WHERE id = '".$this->id."'";
+
+            //Debug
+            //echo $strSQL;
+
+            if(!$result = $G_MY_SQLI->query($strSQL)){
+               $strErr = '<b>SQL ERR </b>'.$fcName.' : '.$G_MY_SQLI->error.'<br>'.$strSQL;
+               print $strErr;
+//                Die();
+            }
+
+        } catch (Exception $e) {
+            $strErr = '<b>OTHER ERR </b>'.$fcName.' : '.$e->getMessage().'<br>'.$strSQL;
+            print $strErr;
+        }
+    }
+
 
     //-----------------------------------------
     //-----------------------------------------
@@ -163,16 +229,6 @@ class db_m_feed_account {
 
             $strSQL  = $strSQL." ORDER BY  id";
 
-/*
-            switch ($order_mode) {
-                case ODR_SORT:
-                    $strSQL  = $strSQL." ORDER BY  sort";
-                    break;
-                default:
-                    $strSQL  = $strSQL." ORDER BY  sort";
-                    break;
-            }
-*/
             //Debug
             //print $strSQL;
 

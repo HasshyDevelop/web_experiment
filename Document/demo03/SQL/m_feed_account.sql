@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS `m_feed_account` (
     url                      varchar(100)      NOT NULL,
     blg_id                   char(20)            NOT NULL,
     make_ptn             int(01)               NOT NULL  DEFAULT 1,
+    feed_date             varchar(50)       ,
     update_date         char(15)            NOT NULL DEFAULT ''
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 --

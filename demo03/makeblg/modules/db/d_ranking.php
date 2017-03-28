@@ -17,11 +17,16 @@ class db_d_ranking {
     function __construct() {
         global $G_TODAY;
 
+        $this->init();
+    }
+    function init(){
+        global $G_TODAY;
+
         $this->blg_id       = "";
         $this->thread_id    = "";
         $this->max_rank    = "";
         $this->point        = "";
-        $this->update_date  = "";
+        $this->update_date  = $G_TODAY;
     }
 
     function set_blg_id($val){
@@ -57,6 +62,73 @@ class db_d_ranking {
                print $strErr;
 //                Die();
             }
+        } catch (Exception $e) {
+            $strErr = '<b>OTHER ERR </b>'.$fcName.' : '.$e->getMessage().'<br>'.$strSQL;
+            print $strErr;
+        }
+    }
+
+
+    //-----------------------------------------
+    //-----------------------------------------
+    function ins_duplicate_upd(){
+        global $G_MY_SQLI;
+        
+        //Debug情報をセット
+        $fcName = $this->tbl_name." insert";
+
+        try{
+            //
+            $strSQL  = "INSERT INTO ".$this->tbl_name." (".$this->tbl_columns.") VALUES (";
+            $strSQL  = $strSQL . " '".$this->blg_id."'";
+            $strSQL  = $strSQL . ",'".$this->thread_id."'";
+            $strSQL  = $strSQL . ",'".$this->max_rank."'";
+            $strSQL  = $strSQL . ",'".$this->point."'";
+            $strSQL  = $strSQL . ",'".$this->update_date."'";
+            $strSQL  = $strSQL . ") ";
+            $strSQL  = $strSQL . " on duplicate key update ";
+            $strSQL  = $strSQL . "  blg_id    = '".$this->blg_id."'";
+            $strSQL  = $strSQL . " ,thread_id = '".$this->thread_id."'";
+            $strSQL  = $strSQL . " ,max_rank = ( ";
+            $strSQL  = $strSQL . "         CASE WHEN max_rank < ".$this->max_rank." THEN max_rank";
+            $strSQL  = $strSQL . "         ELSE ".$this->max_rank." END";
+            $strSQL  = $strSQL . "              )";
+            $strSQL  = $strSQL . " ,point = point+".$this->point."";
+
+
+            if(!$result = $G_MY_SQLI->query($strSQL)){
+               $strErr = '<b>SQL ERR </b>'.$fcName.' : '.$G_MY_SQLI->error.'<br>'.$strSQL;
+               print $strErr;
+//                Die();
+            }
+
+        } catch (Exception $e) {
+            $strErr = '<b>OTHER ERR </b>'.$fcName.' : '.$e->getMessage().'<br>'.$strSQL;
+            print $strErr;
+        }
+    }
+
+    //-----------------------------------------
+    //-----------------------------------------
+    function old_data_delete(){
+        global $G_MY_SQLI;
+        
+        //Debug情報をセット
+        $fcName = $this->tbl_name." old_data_delete";
+
+        try{
+            //
+            $strSQL  = "DELETE FROM ".$this->tbl_name;
+            $strSQL  = $strSQL . " WHERE ";
+            $strSQL  = $strSQL . " update_date < ";
+            $strSQL  = $strSQL . " (DATE_FORMAT(NOW() -INTERVAL 7 DAY , '%Y-%m-%d' ) )";
+
+            if(!$result = $G_MY_SQLI->query($strSQL)){
+               $strErr = '<b>SQL ERR </b>'.$fcName.' : '.$G_MY_SQLI->error.'<br>'.$strSQL;
+               print $strErr;
+//                Die();
+            }
+
         } catch (Exception $e) {
             $strErr = '<b>OTHER ERR </b>'.$fcName.' : '.$e->getMessage().'<br>'.$strSQL;
             print $strErr;

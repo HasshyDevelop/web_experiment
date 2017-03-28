@@ -10,6 +10,7 @@
 
     //db
     require_once 'db/m_feed_account.php';
+    require_once 'db/d_ranking.php';
 
     //util
     require_once 'utl/utl_make_data.php';

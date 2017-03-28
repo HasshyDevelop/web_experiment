@@ -1,8 +1,6 @@
 <?php
 
 class cls_make_data {
-    private $ptn;
-
     function get_threadID($url){
         $result = $url;
 
@@ -16,123 +14,143 @@ class cls_make_data {
         return $result;
     }
 
-    function xml_ptnA($rss_url){
-        $rss = simplexml_load_file($rss_url);
-        echo '<ul>';
+    //--------------------------------
+    // パターン　A
+    //--------------------------------
+    function xml_ptnA($dbFeedObj){
+        $rss = simplexml_load_file($dbFeedObj->get_url());
+
 //        foreach($rss->channel->item as $item){
 
         $cnt = 1;
         $point = DATA_GET_MAX;
-        foreach($rss->item as $item){
-            $title = $item->title;
-            $date = date("Y年 n月 j日", strtotime($item->pubDate));
-            $link = $item->link;
+        $objDB = new db_d_ranking();
+        //古いデータは削除
+        $objDB->old_data_delete();
 
-//echo $this->get_threadID($link)."<br>";
+        $new_feed_data = date('Y-m-d H:i:s', strtotime($rss->channel->children("http://purl.org/dc/elements/1.1/")->date));
+        //Debug
+        print "日付：".$dbFeedObj->get_feed_date()."：".$new_feed_data."<br>";
 
-            $cnt++;
-            $point--;
-            if($cnt > DATA_GET_MAX){
-                break;
+        if($dbFeedObj->get_feed_date() != $new_feed_data){
+
+            foreach($rss->item as $item){
+                $objDB->init();
+
+                $title = $item->title;
+                $link = $item->link;
+
+                $objDB->set_blg_id($dbFeedObj->get_blg_id());
+                $objDB->set_thread_id($this->get_threadID($link));
+                $objDB->set_max_rank($cnt);
+                $objDB->set_point($point);
+
+                $objDB->ins_duplicate_upd();
+
+                $cnt++;
+                $point--;
+                if($cnt > DATA_GET_MAX){
+                    break;
+                }
+
+                //Debug
+                print "ID:".$this->get_threadID($link)."　　POINT:".$point."pt <br>";
+                print "<a href=\"".$link."\" target='_blank'>";
+                print "<span class=\"title\">".$title."</span>";
+                print "</a>";
             }
 
-            $description = mb_strimwidth (strip_tags($item->description), 0 , 110, "…Read More", "utf-8");
-            ?>
-                <li>
-                ID:<?php echo $this->get_threadID($link); ?>
-                　　
-                POINT:<?php echo $point; ?>pt <br>
-                <a href="<?php echo $link; ?>" target="_blank">
-                <span class="date"><?php echo $date; ?></span>
-                <span class="title"><?php echo $title; ?></span>
-                <span class="text"><?php echo $description; ?></span>
-                </a></li>
-            <?php
+            //取得日のUpdate
+            $dbObj  = new db_m_feed_account();
+            $dbObj->set_id($dbFeedObj->get_id());
+            $dbObj->set_feed_date($new_feed_data);
+            $dbObj->upd_feed_date();
         }
-        echo '</ul>';
+
     }
 
-    function xml_ptnB($rss_url){
-        $rss = simplexml_load_file($rss_url);
-        echo '<ul>';
-        foreach($rss->channel->item as $item){
-            $title = $item->title;
-            $date = date("Y年 n月 j日", strtotime($item->pubDate));
-            $link = $item->link;
+    //--------------------------------
+    // パターン　B
+    //--------------------------------
+    function xml_ptnB($dbFeedObj){
+        $rss = simplexml_load_file($dbFeedObj->get_url());
 
-echo $this->get_threadID($link)."<br>";
+        $cnt = 1;
+        $point = DATA_GET_MAX;
+        $objDB = new db_d_ranking();
+        //古いデータは削除
+        $objDB->old_data_delete();
 
-            $description = mb_strimwidth (strip_tags($item->description), 0 , 110, "…Read More", "utf-8");
-            ?>
-                <li><a href="<?php echo $link; ?>" target="_blank">
-                <span class="date"><?php echo $date; ?></span>
-                <span class="title"><?php echo $title; ?></span>
-                <span class="text"><?php echo $description; ?></span>
-                </a></li>
-            <?php
+        $new_feed_data = date('Y-m-d H:i:s', strtotime($rss->channel->children("http://purl.org/dc/elements/1.1/")->date));
+        //Debug
+        print "日付：".$dbFeedObj->get_feed_date()."：".$new_feed_data."<br>";
+
+        if($dbFeedObj->get_feed_date() != $new_feed_data){
+            foreach($rss->channel->item as $item){
+                $title = $item->title;
+                $date = date("Y年 n月 j日", strtotime($item->pubDate));
+                $link = $item->link;
+
+                $objDB->init();
+
+                $title = $item->title;
+                $link = $item->link;
+
+                $objDB->set_blg_id($dbFeedObj->get_blg_id());
+                $objDB->set_thread_id($this->get_threadID($link));
+                $objDB->set_max_rank($cnt);
+                $objDB->set_point($point);
+
+                $objDB->ins_duplicate_upd();
+
+                $cnt++;
+                $point--;
+                if($cnt > DATA_GET_MAX){
+                    break;
+                }
+
+                //Debug
+                print "<a href=\"".$link."\" target='_blank'>";
+                print "<span class=\"title\">".$title."</span>";
+                print "</a>";
+            }
+
+            //取得日のUpdate
+            $dbObj  = new db_m_feed_account();
+            $dbObj->set_id($dbFeedObj->get_id());
+            $dbObj->set_feed_date($new_feed_data);
+            $dbObj->upd_feed_date();
         }
-        echo '</ul>';
-    }
-
-
-    function rktn_html_analysis($url){
-        $html = mb_convert_encoding(file_get_contents($url), 'UTF-8', 'EUC-JP');
-
-        $html = preg_replace('/<\s*meta\s+charset\s*=\s*["\'](.+)["\']\s*\/?\s*>/i', '<meta charset="${1}"><meta http-equiv="Content-Type" content="text/html; charset=${1}">', $html);
-
-
-preg_match_all("/\<.*? class=[\"|\'].*?kWdWrd.*?[\"|\']>(.*?)<\/.*?>/", $html, $result,PREG_PATTERN_ORDER);
-
-$arrItem = $result[1];
-
-for ($i = 0 ; $i < count($arrItem); $i++) {
-    echo ($i+1)."位：".$arrItem[$i];
-    echo "<BR>";
-}
-
-/*
-$dom = new DOMDocument();
-@$dom->loadHTML($html);
-$xml = simplexml_import_dom($dom);//解析したXML文字列をオブジェクトに変換します。
-
-$json = json_encode($xml);
-$scraped_data = json_decode($json,true);
-
-var_dump($scraped_data);
-
-print "<textarea>";
-
-print $html;
-
-print "</textarea>";
-*/
-
-
     }
 
     function main(){
-        $dbObj  = new db_m_feed_account();
-        $result = $dbObj->select_all();
+        $dbFeedObj  = new db_m_feed_account();
+        $result = $dbFeedObj->select_all();
 
         while ($row = $result->fetch_assoc()) {
+            $dbFeedObj->set_id($row['id']);
+            $dbFeedObj->set_name(mb_convert_encoding($row['name'], "UTF-8", "auto"));
+            $dbFeedObj->set_url($row['url']);
+            $dbFeedObj->set_blg_id($row['blg_id']);
+            $dbFeedObj->set_make_ptn($row['make_ptn']);
+            $dbFeedObj->set_feed_date($row['feed_date']);
 
-            $id   = $row['id'];
-            $Name = mb_convert_encoding($row['name'], "UTF-8", "auto");
-            $url  = $row['url'];
-            $ptn  = $row['make_ptn'];
-
-            print $id."<br>";
-            print $Name."<br>";
-            print $url."<br>";
-            print $ptn."<br>";
+            //Debug
+            print $dbFeedObj->get_id()."<br>";
+            print $dbFeedObj->get_name()."<br>";
+            print $dbFeedObj->get_url()."<br>";
+            print $dbFeedObj->get_blg_id()."<br>";
+            print $dbFeedObj->get_make_ptn()."<br>";
+            print $dbFeedObj->get_feed_date()."<br>";
+            print "***********************************************<br>";
 
             //
-            switch ($ptn) {
+            switch ($dbFeedObj->get_make_ptn()) {
                 case 1:
-                    $this->xml_ptnA($row['url']);
+                    $this->xml_ptnA($dbFeedObj);
                     break;
                 case 2:
-                    $this->xml_ptnB($row['url']);
+                    $this->xml_ptnB($dbFeedObj);
                     break;
                 defaul:
                     echo "パターンエラー<br>";

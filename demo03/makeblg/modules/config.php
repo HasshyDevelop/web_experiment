@@ -42,6 +42,7 @@ define('URL_BBSALL'      ,  'http://menu.2ch.sc/bbsmenu.html');
 define('THREAD_TXT_NAME' ,  'subject.txt');     //スレ一覧txtの
 
 define('DATA_GET_MAX' ,  50);
+define('OLD_DELETE_DATE' ,  7); //7日よりのデータは削除
 //スレッド取得最小レス数
 define('MIN_THREAD' ,  200);
 define('DEL_TXT_MIN' ,  80);       //短すぎる文字削除用
