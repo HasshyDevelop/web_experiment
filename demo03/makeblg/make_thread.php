@@ -9,7 +9,7 @@ class cls_htmL_index extends cls_html
     public function page_contents()
     {
 //        echo "オーバーライド　OK";
-        $objUtil = new cls_make_rnk_data();
+        $objUtil = new cls_make_thread_data();
         $objUtil->main();
     }
 }

@@ -10,11 +10,15 @@
 
     //db
     require_once 'db/m_feed_account.php';
+    require_once 'db/m_board.php';
     require_once 'db/d_ranking.php';
+    require_once 'db/wk_thread.php';
 
     //util
-    require_once 'utl/utl_make_data.php';
-//    require_once 'util/utl_thread.php';
+    require_once 'utl/utl_make_rnk_data.php';
+    require_once 'utl/utl_make_thread_data.php';
+    require_once 'utl/utl_make_board.php';
+
 //    require_once 'util/utl_cmn.php';
 
 

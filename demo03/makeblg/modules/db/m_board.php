@@ -1,100 +1,65 @@
 <?php
 //-----------------------------------------
 //-----------------------------------------
-class db_d_ranking {
+class db_m_board {
     private $board_id;
-    private $thread_id;
-    private $max_rank;
-    private $point;
+    private $board_name;
+    private $board_url;
+    private $dat_url;
+    private $sort_no;
     private $update_date;
 
-    private $tbl_name    = " d_ranking";
-    private $tbl_columns = " board_id, thread_id, max_rank, point, update_date";
+    private $tbl_name    = "m_board";
+    private $tbl_columns = " board_id, board_name, board_url, dat_url, sort_no, update_date";
+
+    const sort_no_default = 99999;
 
     //-----------------------------------------
     //変数クリア
     //-----------------------------------------
-    function __construct() {
-        global $G_TODAY;
-
-        $this->init();
-    }
     function init(){
         global $G_TODAY;
 
-        $this->board_id       = "";
-        $this->thread_id    = "";
-        $this->max_rank    = "";
-        $this->point        = "";
-        $this->update_date  = $G_TODAY;
+        $this->board_id        = "";
+        $this->board_name      = "";
+        $this->board_url       = "";
+        $this->dat_url         = "";
+        $this->sort_no         = self::sort_no_default;
+        $this->update_date     = $G_TODAY;
+
+    }
+
+    function __construct() {
+        $this->init();
     }
 
     function set_board_id($val){
-        $this->board_id       = $val;
+        $this->board_id = $val;
     }
-    function set_thread_id($val){
-        $this->thread_id    = $val;
+    function set_board_name($val){
+        $this->board_name  = $val;
     }
-    function set_max_rank($val){
-        $this->max_rank        = $val;
+    function set_board_url($val){
+        $this->board_url  = $val;
     }
-    function set_point($val){
-        $this->point        = $val;
+    function set_dat_url($val){
+        $this->dat_url  = $val;
     }
-    function set_update_date($val){
-       $this->update_date  = $val;
+    function set_sort_no($val){
+        $this->sort_no  = $val;
     }
 
     //-----------------------------------------
     //-----------------------------------------
-
     function truncate(){
         global $G_MY_SQLI;
         
         //Debug情報をセット
-        $fcName = $this->tbl_name."truncate";
-         
+        $fcName = "m_board truncate";
+        
         try{
             //全削除
-            $strSQL  = "TRUNCATE TABLE ".$this->tbl_name;
-            if(!$result = $G_MY_SQLI->query($strSQL)){
-               $strErr = '<b>SQL ERR </b>'.$fcName.' : '.$G_MY_SQLI->error.'<br>'.$strSQL;
-               print $strErr;
-//                Die();
-            }
-        } catch (Exception $e) {
-            $strErr = '<b>OTHER ERR </b>'.$fcName.' : '.$e->getMessage().'<br>'.$strSQL;
-            print $strErr;
-        }
-    }
-
-
-    //-----------------------------------------
-    //-----------------------------------------
-    function ins_duplicate_upd(){
-        global $G_MY_SQLI;
-        
-        //Debug情報をセット
-        $fcName = $this->tbl_name." insert";
-
-        try{
-            //
-            $strSQL  = "INSERT INTO ".$this->tbl_name." (".$this->tbl_columns.") VALUES (";
-            $strSQL  = $strSQL . " '".$this->board_id."'";
-            $strSQL  = $strSQL . ",'".$this->thread_id."'";
-            $strSQL  = $strSQL . ",'".$this->max_rank."'";
-            $strSQL  = $strSQL . ",'".$this->point."'";
-            $strSQL  = $strSQL . ",'".$this->update_date."'";
-            $strSQL  = $strSQL . ") ";
-            $strSQL  = $strSQL . " on duplicate key update ";
-            $strSQL  = $strSQL . "  board_id    = '".$this->board_id."'";
-            $strSQL  = $strSQL . " ,thread_id = '".$this->thread_id."'";
-            $strSQL  = $strSQL . " ,max_rank = ( ";
-            $strSQL  = $strSQL . "         CASE WHEN max_rank < ".$this->max_rank." THEN max_rank";
-            $strSQL  = $strSQL . "         ELSE ".$this->max_rank." END";
-            $strSQL  = $strSQL . "              )";
-            $strSQL  = $strSQL . " ,point = point+".$this->point."";
-
+            $strSQL  = "TRUNCATE TABLE m_board";
 
             if(!$result = $G_MY_SQLI->query($strSQL)){
                $strErr = '<b>SQL ERR </b>'.$fcName.' : '.$G_MY_SQLI->error.'<br>'.$strSQL;
@@ -110,34 +75,6 @@ class db_d_ranking {
 
     //-----------------------------------------
     //-----------------------------------------
-    function old_data_delete(){
-        global $G_MY_SQLI;
-        
-        //Debug情報をセット
-        $fcName = $this->tbl_name." old_data_delete";
-
-        try{
-            //
-            $strSQL  = "DELETE FROM ".$this->tbl_name;
-            $strSQL  = $strSQL . " WHERE ";
-            $strSQL  = $strSQL . " update_date < ";
-            $strSQL  = $strSQL . " (DATE_FORMAT(NOW() -INTERVAL 7 DAY , '%Y-%m-%d' ) )";
-
-            if(!$result = $G_MY_SQLI->query($strSQL)){
-               $strErr = '<b>SQL ERR </b>'.$fcName.' : '.$G_MY_SQLI->error.'<br>'.$strSQL;
-               print $strErr;
-//                Die();
-            }
-
-        } catch (Exception $e) {
-            $strErr = '<b>OTHER ERR </b>'.$fcName.' : '.$e->getMessage().'<br>'.$strSQL;
-            print $strErr;
-        }
-    }
-
-    //-----------------------------------------
-    //-----------------------------------------
-/*
     function insert(){
         global $G_MY_SQLI;
         
@@ -165,27 +102,27 @@ class db_d_ranking {
             print $strErr;
         }
     }
-*/
+
     //-----------------------------------------
     //  duplicate_insert
     //  存在しない場合は Insert
     //  既に存在する場合は無視
     //-----------------------------------------
-/*
     function duplicate_insert (){
         global $G_MY_SQLI;
         
         //Debug情報をセット
-        $fcName = "duplicate_insert";
+        $fcName = $this->tbl_name." duplicate_insert";
 
         try{           //
             $strSQL  = "";
             $strSQL  = $strSQL . "INSERT INTO";
-            $strSQL  = $strSQL . " m_board ";
-            $strSQL  = $strSQL . "SELECT ";
+            $strSQL  = $strSQL . " ".$this->tbl_name;
+            $strSQL  = $strSQL . " SELECT ";
             $strSQL  = $strSQL . " '".$this->board_id."'";
             $strSQL  = $strSQL . ",'".$this->board_name."'";
             $strSQL  = $strSQL . ",'".$this->board_url."'";
+            $strSQL  = $strSQL . ",'".$this->dat_url."'";
             $strSQL  = $strSQL . ", ".$this->sort_no." ";
             $strSQL  = $strSQL . ",'".$this->update_date."'";
             $strSQL  = $strSQL . " FROM";
@@ -195,11 +132,14 @@ class db_d_ranking {
             $strSQL  = $strSQL . "          SELECT";
             $strSQL  = $strSQL . "           'X' ";
             $strSQL  = $strSQL . "          FROM ";
-            $strSQL  = $strSQL . "           m_board";
+            $strSQL  = $strSQL . "          ".$this->tbl_name;
             $strSQL  = $strSQL . "          WHERE";
             $strSQL  = $strSQL . "            board_id = '".$this->board_id."'";
             $strSQL  = $strSQL . "  ";
             $strSQL  = $strSQL . " );";
+
+            //Debug
+            //print $strSQL;
 
             if(!$result = $G_MY_SQLI->query($strSQL)){
                $strErr = '<b>SQL ERR </b>'.$fcName.' : '.$G_MY_SQLI->error.'<br>'.$strSQL;
@@ -212,14 +152,12 @@ class db_d_ranking {
             print $strErr;
         }
     }
-*/
 
     //-----------------------------------------
     //-----------------------------------------
     function select_all($order_mode = null){
         global $G_MY_SQLI;
-        $func_name  = $this->tbl_name."select_all";
-
+        static $func_name  = "m_board select_all";
         try{
 
             if($order_mode == null){
@@ -231,20 +169,17 @@ class db_d_ranking {
             $strSQL  = $strSQL."SELECT  ";
             $strSQL  = $strSQL.$this->tbl_columns;
             $strSQL  = $strSQL." FROM ";
-            $strSQL  = $strSQL." ".$this->tbl_name;
+            $strSQL  = $strSQL."  m_board";
 
-            $strSQL  = $strSQL." ORDER BY  id";
-
-/*
             switch ($order_mode) {
                 case ODR_SORT:
-                    $strSQL  = $strSQL." ORDER BY  sort";
+                    $strSQL  = $strSQL." ORDER BY  sort_no, board_id";
                     break;
                 default:
-                    $strSQL  = $strSQL." ORDER BY  sort";
+                    $strSQL  = $strSQL." ORDER BY  board_id";
                     break;
             }
-*/
+
             //Debug
             //print $strSQL;
 
@@ -267,29 +202,24 @@ class db_d_ranking {
 
     //-----------------------------------------
     //-----------------------------------------
-    function select_sort_rnk($board_id=NUL, $order_mode=NULL){
+    function select_no_sortno($order_mode){
         global $G_MY_SQLI;
-
-        $func_name  = $this->tbl_name." select_sort_rnk";
+        static $func_name  = "select_no_sortno";
         try{
             //全検索
             $strSQL  = "";
             $strSQL  = $strSQL."SELECT  ";
             $strSQL  = $strSQL.$this->tbl_columns;
             $strSQL  = $strSQL." FROM ";
-            $strSQL  = $strSQL."  ".$this->tbl_name;
+            $strSQL  = $strSQL."  m_board";
             $strSQL  = $strSQL." WHERE ";
-            $strSQL  = $strSQL."  thread_id <> '0' ";   //ダミー
-            if($board_id != NULL){
-                $strSQL  = $strSQL." AND board_id = '".$board_id."'";
-            }
-
+            $strSQL  = $strSQL."  sort_no = ".self::sort_no_default;
             switch ($order_mode) {
-                case RNK_ORDER_DEF:
-                    $strSQL  = $strSQL." ORDER BY  point DESC, max_rank DESC";
+                case ODR_SORT:
+                    $strSQL  = $strSQL." ORDER BY  sort_no, board_id";
                     break;
                 default:
-                    $strSQL  = $strSQL." ORDER BY  point ASC, max_rank ASC";
+                    $strSQL  = $strSQL." ORDER BY  board_id";
                     break;
             }
 
@@ -311,7 +241,6 @@ class db_d_ranking {
 
     //-----------------------------------------
     //-----------------------------------------
-/*
     function select_sortno($order_mode){
         global $G_MY_SQLI;
         static $func_name  = "select_no_sortno";
@@ -351,11 +280,10 @@ class db_d_ranking {
             return NULL;
         }
     }
-*/
+
     //-----------------------------------------
     // sort_no_reset
     //-----------------------------------------
-/*
     function sort_no_reset (){
         global $G_MY_SQLI;
         
@@ -377,12 +305,10 @@ class db_d_ranking {
             print $strErr;
         }
     }
-*/
 
     //-----------------------------------------
     // sort_no_upd
     //-----------------------------------------
-/*
     function sort_no_upd ($id, $sort_no){
         global $G_MY_SQLI;
         
@@ -407,7 +333,7 @@ class db_d_ranking {
             print $strErr;
         }
     }
-*/
+
 
 }
 

@@ -41,6 +41,8 @@ define('URL_DOMAIN'      ,  'http://localhost/deru/');
 define('URL_BBSALL'      ,  'http://menu.2ch.sc/bbsmenu.html');
 define('THREAD_TXT_NAME' ,  'subject.txt');     //スレ一覧txtの
 
+define('CNV_STR_THREAD_ID' ,  '[THREAD_ID]');
+
 define('DATA_GET_MAX' ,  50);
 define('OLD_DELETE_DATE' ,  7); //7日よりのデータは削除
 //スレッド取得最小レス数
@@ -53,12 +55,8 @@ define('PATH_TPL' ,  './modules/tpl/');
 define('ERR_CD_NODATA' ,  'no_data');
 define('SORT_CD_DEF'   ,  '00000');
 
-define('ODR_BOARD' ,  'boad_id');
-define('ODR_SORT'  ,  'sort_no');
+define('RNK_ORDER_DEF' ,  'pont_rnk_desc');
 
-define('LOGIN_IN'  ,  'login');
-define('LOGIN_OUT' ,  'logout');
-define('LOGIN_NEW' ,  'new');
 
 //端末情報
 //MOBILE = ガラケー = 1

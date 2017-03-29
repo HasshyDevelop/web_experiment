@@ -5,14 +5,14 @@ class db_m_feed_account {
     private $id;
     private $name;
     private $url;
-    private $blg_id;
+    private $board_id;
     private $make_ptn;
     private $feed_date;
     private $update_date;
 
 
     private $tbl_name    = " m_feed_account";
-    private $tbl_columns = " id,name,url,blg_id, make_ptn, feed_date, update_date";
+    private $tbl_columns = " id,name,url,board_id, make_ptn, feed_date, update_date";
 
     //-----------------------------------------
     //変数クリア
@@ -23,7 +23,7 @@ class db_m_feed_account {
         $this->id           = "";
         $this->name         = "";
         $this->url          = "";
-        $this->blg_id       = "";
+        $this->board_id       = "";
         $this->make_ptn     = "";
         $this->feed_date    = "";
         $this->update_date  = "";
@@ -39,8 +39,8 @@ class db_m_feed_account {
     function set_url($val){
         $this->url  = $val;
     }
-    function set_blg_id($val){
-        $this->blg_id  = $val;
+    function set_board_id($val){
+        $this->board_id  = $val;
     }
     function set_make_ptn($val){
         $this->make_ptn  = $val;
@@ -62,8 +62,8 @@ class db_m_feed_account {
     function get_url(){
         return $this->url;
     }
-    function get_blg_id(){
-        return $this->blg_id;
+    function get_board_id(){
+        return $this->board_id;
     }
     function get_make_ptn(){
         return $this->make_ptn;

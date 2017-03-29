@@ -2,11 +2,19 @@ INSERT INTO m_feed_account VALUES('yahoo01','デイリーランキング - 急�
 INSERT INTO m_feed_account VALUES('rktn01','楽天  注目キーワード一覧','http://search.rakuten.co.jp/search/keyword/',2,2,DATE_FORMAT(now(),'%Y/%m/%d'));
 INSERT INTO m_feed_account VALUES('twipple','ついっぷるトレンド HOTワード','https://tr.twipple.jp/rss/hotword.xml',1,1,DATE_FORMAT(now(),'%Y/%m/%d'));
 
-
-
 INSERT INTO m_feed_account VALUES('newsplus01','ニュース速報+:2ch勢いランキング','http://2ch-ranking.net/rss/newsplus.rdf','newsplus',1,NULL,DATE_FORMAT(now(),'%Y/%m/%d'));
 INSERT INTO m_feed_account VALUES('newsplus02','２ちゃんねる勢いランキング ニュース勢いTOP50','http://www.ikioi2ch.net/rss/single/news.xml','newsplus',2,NULL,DATE_FORMAT(now(),'%Y/%m/%d'));
 
+http://ai.2ch.sc/newsplus/
+
+http://ai.2ch.sc/newsplus/1490665702
+http://ai.2ch.sc/newsplus/dat/1490665702.dat
+http://ai.2ch.sc/newsplus/
+
+元ネタ
+http://ai.2ch.sc/test/read.cgi/newsplus/1490665702
+Dat
+http://ai.2ch.sc/newsplus/dat/1490665702.dat
 
 料理:2ch勢いランキング
 http://2ch-ranking.net/rss/cook.rdf

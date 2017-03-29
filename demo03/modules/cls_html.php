@@ -35,6 +35,12 @@ class cls_html
 
     public function page_header()
     {
+        $idx_path  = $this->inc_dir."index.php";
+        $rank_path = $this->inc_dir."makeblg/";
+        $thread_path = $this->inc_dir."makeblg/make_thread.php";
+        $board_path = $this->inc_dir."makeblg/make_board.php";
+
+
         echo '<div id="header">'."\n";
         echo '<h1><a href="index.html">DEMO 03</a></h1>'."\n";
         echo '<p>'."\n";
@@ -50,13 +56,13 @@ class cls_html
         echo '</div><!-- /#header-->'."\n";
         echo '<div id="menu">'."\n";
         echo '<ul>'."\n";
-        echo '<li><a href="#" class="on">HOME</a></li>'."\n";
-        echo '<li><a href="./makeblg/">MAKE BLG</a></li>'."\n";
-        echo '<li><a href="#">BBS</a></li>'."\n";
+        echo '<li><a href="'.$idx_path.'" class="on">HOME</a></li>'."\n";
+        echo '<li><a href="'.$rank_path.'">RNK</a></li>'."\n";
+        echo '<li><a href="'.$thread_path.'">THREAD</a></li>'."\n";
         echo '<li><a href="#">DIARY</a></li>'."\n";
         echo '<li><a href="#">GALLERY</a></li>'."\n";
         echo '<li><a href="#">BOOKMARK</a></li>'."\n";
-        echo '<li><a href="#">CONTACT</a></li>'."\n";
+        echo '<li><a href="'.$board_path.'">BOARD</a></li>'."\n";
         echo '</ul>'."\n";
         echo '</div><!-- /#menu-->'."\n";
     }

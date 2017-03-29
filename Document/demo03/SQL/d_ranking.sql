@@ -7,7 +7,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `d_ranking` (
-    blg_id                  char(20)            NOT NULL,
+    board_id               char(20)            NOT NULL,
     thread_id             varchar(100)      NOT NULL,
     max_rank             char(3)              NOT NULL,
     point                   int(5)                 NOT NULL DEFAULT 0,
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS `d_ranking` (
 -- Indexes for table `d_ranking`
 --
 ALTER TABLE `d_ranking` 
- ADD PRIMARY KEY (blg_id, thread_id);
+ ADD PRIMARY KEY (board_id, thread_id);
 --
 -- テーブルのデータのダンプ `wp01_users`
 -- 

@@ -1,6 +1,6 @@
 <?php
 
-class cls_make_data {
+class cls_make_rnk_data {
     function get_threadID($url){
         $result = $url;
 
@@ -40,7 +40,7 @@ class cls_make_data {
                 $title = $item->title;
                 $link = $item->link;
 
-                $objDB->set_blg_id($dbFeedObj->get_blg_id());
+                $objDB->set_board_id($dbFeedObj->get_board_id());
                 $objDB->set_thread_id($this->get_threadID($link));
                 $objDB->set_max_rank($cnt);
                 $objDB->set_point($point);
@@ -57,7 +57,7 @@ class cls_make_data {
                 print "ID:".$this->get_threadID($link)."　　POINT:".$point."pt <br>";
                 print "<a href=\"".$link."\" target='_blank'>";
                 print "<span class=\"title\">".$title."</span>";
-                print "</a>";
+                print "</a><br>";
             }
 
             //取得日のUpdate
@@ -96,7 +96,7 @@ class cls_make_data {
                 $title = $item->title;
                 $link = $item->link;
 
-                $objDB->set_blg_id($dbFeedObj->get_blg_id());
+                $objDB->set_board_id($dbFeedObj->get_board_id());
                 $objDB->set_thread_id($this->get_threadID($link));
                 $objDB->set_max_rank($cnt);
                 $objDB->set_point($point);
@@ -112,7 +112,7 @@ class cls_make_data {
                 //Debug
                 print "<a href=\"".$link."\" target='_blank'>";
                 print "<span class=\"title\">".$title."</span>";
-                print "</a>";
+                print "</a><br>";
             }
 
             //取得日のUpdate
@@ -131,7 +131,7 @@ class cls_make_data {
             $dbFeedObj->set_id($row['id']);
             $dbFeedObj->set_name(mb_convert_encoding($row['name'], "UTF-8", "auto"));
             $dbFeedObj->set_url($row['url']);
-            $dbFeedObj->set_blg_id($row['blg_id']);
+            $dbFeedObj->set_board_id($row['board_id']);
             $dbFeedObj->set_make_ptn($row['make_ptn']);
             $dbFeedObj->set_feed_date($row['feed_date']);
 
@@ -139,7 +139,7 @@ class cls_make_data {
             print $dbFeedObj->get_id()."<br>";
             print $dbFeedObj->get_name()."<br>";
             print $dbFeedObj->get_url()."<br>";
-            print $dbFeedObj->get_blg_id()."<br>";
+            print $dbFeedObj->get_board_id()."<br>";
             print $dbFeedObj->get_make_ptn()."<br>";
             print $dbFeedObj->get_feed_date()."<br>";
             print "***********************************************<br>";
