@@ -3,6 +3,7 @@
 class cls_make_board {
 
     private $board_url;
+    private $read_url;
     private $dat_url;
 
     function set_server_url($url,$board_id){
@@ -15,7 +16,8 @@ class cls_make_board {
         $last_pos = strrpos($base_url, "/") + 1;
         $base_url = substr($base_url, 0, $last_pos);
 
-        $this->board_url    = $base_url."test/read.cgi/".$board_id."/".CNV_STR_THREAD_ID;
+        $this->board_url    = $base_url.$board_id;
+        $this->read_url     = $base_url."test/read.cgi/".$board_id."/".CNV_STR_THREAD_ID;
         $this->dat_url      = $base_url.$board_id."/dat/".CNV_STR_THREAD_ID.".dat";
     }
 
@@ -59,6 +61,7 @@ class cls_make_board {
                     $objDB->set_board_id($board_id);
                     $objDB->set_board_name($board_name);
                     $objDB->set_board_url($this->board_url);
+                    $objDB->set_read_url($this->read_url);
                     $objDB->set_dat_url($this->dat_url);
 
                     //DB 更新
@@ -73,8 +76,9 @@ class cls_make_board {
                     print '<BR>';
                     print 'BOARD URL：'.$this->board_url.'&#13;';
                     print '<BR>';
+                    print 'READ URL：'.$this->read_url.'&#13;';
+                    print '<BR>';
                     print 'DAT URL：'.$this->dat_url.'&#13;';
-
 
                     print '<BR>';
 

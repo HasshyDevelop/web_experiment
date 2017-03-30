@@ -14,8 +14,6 @@ class db_wk_thread {
     public $disp_flg;
     public $update_date;
 
-
-
     private $tbl_name = "wk_thread";
 
     public $tbl_colums = "thread_id"
@@ -157,14 +155,14 @@ class db_wk_thread {
     //-----------------------------------------
     function select_disp(){
         global $G_MY_SQLI;
-        $FuncName  = $this->$tbl_name." select_disp";
+        $FuncName  = $this->tbl_name." select_disp";
         try{
             //
             $strSQL  = "";
             $strSQL  = $strSQL."SELECT  ";
             $strSQL  = $strSQL.$this->tbl_colums;
             $strSQL  = $strSQL." FROM ";
-            $strSQL  = $strSQL." wk_thread";
+            $strSQL  = $strSQL." ".$this->tbl_name;
             $strSQL  = $strSQL." WHERE ";
             $strSQL  = $strSQL." disp_flg = 1";
             $strSQL  = $strSQL." AND thread_id = '".$this->thread_id."'";
@@ -172,7 +170,7 @@ class db_wk_thread {
             $strSQL  = $strSQL." ORDER BY  sort_cd";
 
             //Debug
-            echo $strSQL;
+            //echo $strSQL;
 
             if(!$result = $G_MY_SQLI->query($strSQL)){
                $strErr = '<b>SQL ERR </b>'.$FuncName.' : '.$G_MY_SQLI->error.'<br>'.$strSQL;

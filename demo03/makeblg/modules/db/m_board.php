@@ -5,12 +5,13 @@ class db_m_board {
     private $board_id;
     private $board_name;
     private $board_url;
+    private $read_url;
     private $dat_url;
     private $sort_no;
     private $update_date;
 
     private $tbl_name    = "m_board";
-    private $tbl_columns = " board_id, board_name, board_url, dat_url, sort_no, update_date";
+    private $tbl_columns = " board_id, board_name, board_url, read_url, dat_url, sort_no, update_date";
 
     const sort_no_default = 99999;
 
@@ -23,6 +24,7 @@ class db_m_board {
         $this->board_id        = "";
         $this->board_name      = "";
         $this->board_url       = "";
+        $this->read_url         = "";
         $this->dat_url         = "";
         $this->sort_no         = self::sort_no_default;
         $this->update_date     = $G_TODAY;
@@ -41,6 +43,9 @@ class db_m_board {
     }
     function set_board_url($val){
         $this->board_url  = $val;
+    }
+    function set_read_url($val){
+        $this->read_url  = $val;
     }
     function set_dat_url($val){
         $this->dat_url  = $val;
@@ -122,6 +127,7 @@ class db_m_board {
             $strSQL  = $strSQL . " '".$this->board_id."'";
             $strSQL  = $strSQL . ",'".$this->board_name."'";
             $strSQL  = $strSQL . ",'".$this->board_url."'";
+            $strSQL  = $strSQL . ",'".$this->read_url."'";
             $strSQL  = $strSQL . ",'".$this->dat_url."'";
             $strSQL  = $strSQL . ", ".$this->sort_no." ";
             $strSQL  = $strSQL . ",'".$this->update_date."'";
@@ -178,6 +184,45 @@ class db_m_board {
                 default:
                     $strSQL  = $strSQL." ORDER BY  board_id";
                     break;
+            }
+
+            //Debug
+            //print $strSQL;
+
+            if(!$result = $G_MY_SQLI->query($strSQL)){
+               $strErr = '<b>SQL ERR </b>'.$func_name.' : '.$G_MY_SQLI->error.'<br>'.$strSQL;
+               print $strErr;
+               //Die();
+               return NULL;
+            }
+
+            return $result;
+
+        } catch (Exception $e) {
+            $strErr = '<b>OTHER ERR </b>'.$FuncName.' : '.$e->getMessage().'<br>'.$strSQL;
+            print $strErr;
+            
+            return NULL;
+        }
+    }
+
+    //-----------------------------------------
+    //-----------------------------------------
+    function select_with_key($board_id = NULL){
+        global $G_MY_SQLI;
+        $func_name  = $this->tbl_name." select_with_key";
+        try{
+
+            //全検索
+            $strSQL  = "";
+            $strSQL  = $strSQL."SELECT  ";
+            $strSQL  = $strSQL.$this->tbl_columns;
+            $strSQL  = $strSQL." FROM ";
+            $strSQL  = $strSQL."  ".$this->tbl_name;
+            $strSQL  = $strSQL." WHERE  board_id != '' ";     //ダミー
+
+            if($board_id != NULL){
+                $strSQL  = $strSQL." AND  board_id = '".$board_id."'";
             }
 
             //Debug
