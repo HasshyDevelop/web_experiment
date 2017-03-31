@@ -43,6 +43,8 @@ define('THREAD_TXT_NAME' ,  'subject.txt');     //スレ一覧txtの
 
 define('CNV_STR_THREAD_ID' ,  '[THREAD_ID]');
 
+define('TASK_ID' ,  'sys');
+
 define('DATA_GET_MAX' ,  50);
 define('OLD_DELETE_DATE' ,  7); //7日よりのデータは削除
 //スレッド取得最小レス数
@@ -57,6 +59,11 @@ define('SORT_CD_DEF'   ,  '00000');
 
 define('RNK_ORDER_DEF' ,  'pont_rnk_desc');
 
+define('EXEC_ID_RSS'        ,  'get_rss');
+define('EXEC_ID_MAKE_BORAD' ,  'make_bord');
+define('EXEC_ID_MAKE_THREAD_STEP1' ,  'make_thread1');
+define('EXEC_ID_MAKE_THREAD_STEP2' ,  'make_thread2');
+define('EXEC_ID_MAKE_THREAD_STEP3' ,  'make_thread3');
 
 //端末情報
 //MOBILE = ガラケー = 1

@@ -165,7 +165,7 @@ class db_wk_thread {
             $strSQL  = $strSQL." ".$this->tbl_name;
             $strSQL  = $strSQL." WHERE ";
             $strSQL  = $strSQL." disp_flg = 1";
-            $strSQL  = $strSQL." AND thread_id = '".$this->thread_id."'";
+//            $strSQL  = $strSQL." AND thread_id = '".$this->thread_id."'";
 
             $strSQL  = $strSQL." ORDER BY  sort_cd";
 
@@ -203,7 +203,8 @@ class db_wk_thread {
             $strSQL  = $strSQL." wk_thread";
             $strSQL  = $strSQL." WHERE ";
             $strSQL  = $strSQL." disp_flg = 1";
-            $strSQL  = $strSQL." AND post_txt LIKE '%&gt;&gt;%'";
+            $strSQL  = $strSQL." AND ( post_txt LIKE '%&gt;&gt;%'";
+            $strSQL  = $strSQL."      OR post_txt LIKE '%>>%')";
             $strSQL  = $strSQL." ORDER BY  parent_res_id, res_id";
 //print $strSQL;
 

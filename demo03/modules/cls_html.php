@@ -39,6 +39,7 @@ class cls_html
         $rank_path = $this->inc_dir."makeblg/";
         $thread_path = $this->inc_dir."makeblg/make_thread.php";
         $board_path = $this->inc_dir."makeblg/make_board.php";
+        $task_path = $this->inc_dir."makeblg/task.php";
 
 
         echo '<div id="header">'."\n";
@@ -61,7 +62,7 @@ class cls_html
         echo '<li><a href="'.$thread_path.'">THREAD</a></li>'."\n";
         echo '<li><a href="#">DIARY</a></li>'."\n";
         echo '<li><a href="#">GALLERY</a></li>'."\n";
-        echo '<li><a href="#">BOOKMARK</a></li>'."\n";
+        echo '<li><a href="'.$task_path.'">TASK</a></li>'."\n";
         echo '<li><a href="'.$board_path.'">BOARD</a></li>'."\n";
         echo '</ul>'."\n";
         echo '</div><!-- /#menu-->'."\n";

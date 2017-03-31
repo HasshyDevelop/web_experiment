@@ -54,10 +54,13 @@ class cls_make_thread_data {
 
         $arr_sort_code = [];
         while ($row = $result->fetch_assoc()) {
+            $this->thread_id = $row['thread_id'];
+
             $pos_s = strpos($row['post_txt'], "&gt;&gt;");
             $pos_s = $pos_s + strlen ("&gt;&gt;");
 
             $wk_txt = substr($row['post_txt'],$pos_s,1);
+
             $wk_num = 0;
             while (is_numeric($wk_txt)){
                 $wk_num = ($wk_num * 10) + intval($wk_txt);
@@ -65,7 +68,7 @@ class cls_make_thread_data {
                 $pos_s++;
                 $wk_txt = substr($row['post_txt'],$pos_s,1);
             }
-
+            
             $parent_res_id = $row['parent_res_id'];
             if($wk_num != 0){
                 $parent_res_id = $wk_num;
@@ -279,10 +282,7 @@ class cls_make_thread_data {
         @fclose($thread_list);
     }
 
-    function main(){
-//Debug
-$board_id     = "newsplus";
-
+    function main($board_id){
         $dbObj  = new db_d_ranking();
         $loopFlg = true;
         $loopCnt = 1;
@@ -310,20 +310,14 @@ $board_id     = "newsplus";
                 print $row['thread_id']."<br>";
                 print $row['thread_id']."<br>";
                 print "スレタイ：".$this->thread_name."<br>";
-
-                //print $row['max_rank']."<br>";
-                //print $row['point']."<br>";
-                //print $row['update_date']."<br>";
-                //print "BASE ".$this->base_board_url."<br>";
-                //print "DAT  ".$this->base_dat_url."<br>";
-
-                print "引用元 ".$this->thread_name."<br>";
-                print "　　　 ".str_replace('[THREAD_ID]',$row['thread_id'],$this->base_board_url)."<br>";
+                print "引用元 ".$row['read_url']."<br>";
+//                print "　　　 ".str_replace('[THREAD_ID]',$row['thread_id'],$this->base_board_url)."<br>";
     //            print $this->dat_url;
                 print "***********************************************<br>";
 
                 //
-                $this->wk_thread_disp($row['thread_id']);
+//                $this->wk_thread_disp($row['thread_id']);
+//                $this->wk_thread_disp();
                 break;
             }
             
@@ -336,10 +330,10 @@ $board_id     = "newsplus";
 
 //*** 以下 DEBUG用 ***********************************
     //結果の表示
-    function wk_thread_disp($thread_id){
+    function wk_thread_disp(){
         //wk_thread オブジェクトの作成
         $dbObj = new db_wk_thread();
-        $dbObj->thread_id = $thread_id;
+//        $dbObj->thread_id = $thread_id;
 
         //DBの値を取得
         $result = $dbObj->select_disp();
