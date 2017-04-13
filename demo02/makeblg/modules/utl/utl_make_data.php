@@ -75,7 +75,7 @@ print "</textarea>";
             //
             switch ($ptn) {
                 case 1:
-//                    $this->xmls_general($row['url']);
+                    $this->xmls_general($row['url']);
                     break;
                 case 2:
                     $this->rktn_html_analysis($row['url']);

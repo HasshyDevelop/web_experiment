@@ -35,6 +35,8 @@ class cls_html
 
     public function page_header()
     {
+        $path_make_blg = $this->inc_dir."makeblg/makeblg.php";
+
         echo '<div id="header">'."\n";
         echo '<h1><a href="index.html">DEMO 02</a></h1>'."\n";
         echo '<p>'."\n";
@@ -51,8 +53,8 @@ class cls_html
         echo '<div id="menu">'."\n";
         echo '<ul>'."\n";
         echo '<li><a href="#" class="on">HOME</a></li>'."\n";
-        echo '<li><a href="./makeblg/">MAKE BLG</a></li>'."\n";
-        echo '<li><a href="#">BBS</a></li>'."\n";
+        echo '<li><a href="'.$path_make_blg.'">MAKE BLG</a></li>'."\n";
+        echo '<li><a href="./makeblg/markov.php">markov</a></li>'."\n";
         echo '<li><a href="#">DIARY</a></li>'."\n";
         echo '<li><a href="#">GALLERY</a></li>'."\n";
         echo '<li><a href="#">BOOKMARK</a></li>'."\n";
